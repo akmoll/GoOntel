@@ -34,19 +34,19 @@
         <tr>
             <th>Merk</th>
             <th>Jenis Sepeda</th>
-			<th>Warna</th>
+			<th>Kode Sepeda</th>
             <th>Status</th>
             <th>Opsi</th>
         </tr>
         @foreach($sepeda as $m)
         <tr>
-            <td>{{ $m->merk }}</td>
-            <td>{{ $m->jenissepeda }}</td>
-            <td>{{ $m->warna }}</td>
-            <td>{{ $m->status }}</td>
+            <td>{{ $m->merk_sepeda}}</td>
+            <td>{{ $m->jenis_sepeda}}</td>
+            <td>{{ $m->kodesepeda}}</td>
+            <td>{{ $m->status_sepeda }}</td>
             <td>
-                <a href="/sepeda/hapus/{{ $m->id}}"> Hapus </a>
-                <a href="/sepeda/detail/{{ $m->id}}"> Detail </a>
+                <a href="/sepeda/hapus/{{ $m->kodesepeda}}"> Hapus </a>
+                <a href="/sepeda/detail/{{ $m->kodesepeda}}"> Detail </a>
             </td>
         </tr>
             @endforeach

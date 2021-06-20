@@ -3,9 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\DB;
 
-class SepedaController extends Controller
+class FormController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,10 +13,9 @@ class SepedaController extends Controller
      */
     public function index()
     {
-        $sepeda = DB::table('listsepeda')->paginate(5);
+        //
+        $form = \App\formpinjam::all
 
-        //kirim data ke view
-        return view('sepeda', ['sepeda' => $sepeda]);
     }
 
     /**
@@ -28,16 +26,21 @@ class SepedaController extends Controller
     public function create()
     {
         //
-        \App\Sepeda::create([
-            'kode' => $request->get('kode'),
-            'merk' => $request->get('merk'),
-            'kualitas' => $request->get('kualitas'),
-            'jenis' => $request->get('jenis'),
-            'warna' => $request->get('warna'),
-            'harga' => $request->get('harga'),
+        \App\Form::create([
+            'id_form' => $request->get('id_form'),
+            'nama_peminjam' => $request->get('nama_peminjam'),
+            'nrp' => $request->get('nrp'),
+            'fakultas' => $request->get('fakultas'),
+            'departemen' => $request->get('departemen'),
+            'alamat_rumah' => $request->get('alamat_rumah'),
+            'alamat_sby' => $request->get('alamat_sby'),
+            'nohp' => $request->get('nohp'),
+            'email' => $request->get('email'),
+            'tanggal_pinjam' => $request->get('tanggal_pinjam'),
+            'tanggal_kembali' => $request->get('tanggal_kembali'),
           ]);
 
-          return redirect('/sepeda');
+          return redirect('/form');
     }
 
     /**
@@ -93,11 +96,6 @@ class SepedaController extends Controller
      */
     public function destroy($id)
     {
-         //hapus data sepeda berdasar id yang dipilih
-         DB::table('listsepeda')->where('kodesepeda', $id)->delete();
-         DB::table('detailsepeda')->where('kode_sepeda', $id)->delete();
-
-         //alihkan ke halaman pendapatan
-         return redirect('/sepeda');
+        //
     }
 }
