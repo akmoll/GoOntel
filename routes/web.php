@@ -14,11 +14,11 @@ use Illuminate\Support\Facades\Route;
 */
 
 
-
 //Sepeda
 Route::get('/sepeda', 'App\Http\Controllers\SepedaController@index');
 Route::get('/sepeda/hapus/{id}', 'App\Http\Controllers\SepedaController@destroy');
 Route::get('/sepeda/hapus/{id}', 'App\Http\Controllers\SepedaController@destroy');
+
 
 Auth::routes();
 
@@ -36,6 +36,10 @@ Route::group(['middleware' => 'auth'], function () {
 	 Route::get('icons', function () {return view('pages.icons');})->name('icons');
 	 Route::get('table-list', function () {return view('pages.tables');})->name('table');
 	Route::put('profile/password', ['as' => 'profile.password', 'uses' => 'App\Http\Controllers\ProfileController@password']);
+});
+
+Route::get('/form', function () {
+    return view('formpeminjaman');
 });
 
 Route::resource('/form', 'FormController');
