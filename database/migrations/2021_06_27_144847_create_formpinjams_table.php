@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateFormpinjamTable extends Migration
+class CreateFormpinjamsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,7 @@ class CreateFormpinjamTable extends Migration
      */
     public function up()
     {
-        Schema::create('formpinjam', function (Blueprint $table) {
+        Schema::create('formpinjams', function (Blueprint $table) {
             $table->increments('id_form');
             $table->string('nama_peminjam', 30)->nullable();
             $table->string('nrp', 16)->nullable();
@@ -36,6 +36,6 @@ class CreateFormpinjamTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('formpinjam');
+        Schema::dropIfExists('formpinjams');
     }
 }

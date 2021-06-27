@@ -14,7 +14,7 @@ class SepedaController extends Controller
      */
     public function index()
     {
-        $sepeda = \App\Models\Sepeda::all();
+        $sepeda = \App\Models\listsepeda::all();
         return view('viewsepedas', ['allSepedas' => $sepeda]);
     }
 
@@ -26,7 +26,7 @@ class SepedaController extends Controller
     public function create()
     {
         //
-
+        return view('createsepeda');
     }
 
     /**
@@ -38,7 +38,7 @@ class SepedaController extends Controller
     public function store(Request $request)
     {
         //
-        \App\Models\Sepeda::create([
+        \App\Models\listsepeda::create([
             'kode' => $request->get('kode'),
             'merk' => $request->get('merk'),
             'kualitas' => $request->get('kualitas'),

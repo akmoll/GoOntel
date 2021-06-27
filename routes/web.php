@@ -14,10 +14,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 
-//Sepeda
-Route::get('/sepeda', 'App\Http\Controllers\SepedaController@index');
-Route::get('/sepeda/hapus/{id}', 'App\Http\Controllers\SepedaController@destroy');
-Route::get('/sepeda/hapus/{id}', 'App\Http\Controllers\SepedaController@destroy');
+
 
 Route::get('/', function () {
     return view('welcome');
@@ -46,3 +43,4 @@ Route::get('/form', function () {
 });
 
 //Route::resource('/form', 'FormController');
+Route::resource('/sepeda', 'SepedaController');

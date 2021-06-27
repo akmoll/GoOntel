@@ -18,5 +18,6 @@ class form extends Model
         'email',
         'tanggal_pinjam',
         'tanggal_kembali',
+        'status',
      ];
 }
