@@ -14,7 +14,8 @@ class FormController extends Controller
     public function index()
     {
         //
-        $form = \App\formpinjam::all
+        $form = \App\Models\Form::all();
+        return view('formpeminjaman', ['form' => $form]);
 
     }
 
@@ -26,7 +27,19 @@ class FormController extends Controller
     public function create()
     {
         //
-        \App\Form::create([
+        return view('FormPeminjaman');
+    }
+
+    /**
+     * Store a newly created resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\Response
+     */
+    public function store(Request $request)
+    {
+        //
+        \App\Models\Form::create([
             'id_form' => $request->get('id_form'),
             'nama_peminjam' => $request->get('nama_peminjam'),
             'nrp' => $request->get('nrp'),
@@ -41,17 +54,6 @@ class FormController extends Controller
           ]);
 
           return redirect('/form');
-    }
-
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request)
-    {
-        //
     }
 
     /**
