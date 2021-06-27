@@ -19,13 +19,16 @@ Route::get('/sepeda', 'App\Http\Controllers\SepedaController@index');
 Route::get('/sepeda/hapus/{id}', 'App\Http\Controllers\SepedaController@destroy');
 Route::get('/sepeda/hapus/{id}', 'App\Http\Controllers\SepedaController@destroy');
 
+Route::get('/', function () {
+    return view('welcome');
+});
 
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Auth::routes();
 
-Route::get('/home', 'App\Http\Controllers\HomeController@index')->name('home');
+//Route::get('/home', 'App\Http\Controllers\HomeController@index')->name('home');
 
 Route::group(['middleware' => 'auth'], function () {
 	Route::resource('user', 'App\Http\Controllers\UserController', ['except' => ['show']]);
@@ -42,4 +45,4 @@ Route::get('/form', function () {
     return view('formpeminjaman');
 });
 
-Route::resource('/form', 'FormController');
+//Route::resource('/form', 'FormController');

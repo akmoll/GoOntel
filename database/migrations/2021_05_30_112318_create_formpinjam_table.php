@@ -25,7 +25,7 @@ class CreateFormpinjamTable extends Migration
             $table->string('email', 30)->nullable();
             $table->date('tanggal_pinjam')->nullable();
             $table->date('tanggal_kembali')->nullable();
-
+            $table->string('status', 16)->nullable();
         });
     }
 
