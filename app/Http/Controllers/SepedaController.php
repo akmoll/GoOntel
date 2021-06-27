@@ -14,10 +14,8 @@ class SepedaController extends Controller
      */
     public function index()
     {
-        $sepeda = DB::table('listsepeda')->paginate(5);
-
-        //kirim data ke view
-        return view('sepeda', ['sepeda' => $sepeda]);
+        $sepeda = \App\Models\Sepeda::all();
+        return view('viewsepedas', ['allSepedas' => $sepeda]);
     }
 
     /**
@@ -28,16 +26,7 @@ class SepedaController extends Controller
     public function create()
     {
         //
-        \App\Sepeda::create([
-            'kode' => $request->get('kode'),
-            'merk' => $request->get('merk'),
-            'kualitas' => $request->get('kualitas'),
-            'jenis' => $request->get('jenis'),
-            'warna' => $request->get('warna'),
-            'harga' => $request->get('harga'),
-          ]);
 
-          return redirect('/sepeda');
     }
 
     /**
@@ -49,6 +38,16 @@ class SepedaController extends Controller
     public function store(Request $request)
     {
         //
+        \App\Models\Sepeda::create([
+            'kode' => $request->get('kode'),
+            'merk' => $request->get('merk'),
+            'kualitas' => $request->get('kualitas'),
+            'jenis' => $request->get('jenis'),
+            'warna' => $request->get('warna'),
+            'harga' => $request->get('harga'),
+          ]);
+
+          return redirect('/sepeda');
     }
 
     /**
