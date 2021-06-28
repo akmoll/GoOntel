@@ -7,6 +7,13 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
 
+RBPL A Kelompok 4 :
+Graha Yohanes Napitupulu 05211940000013
+Mohammad Awaluddin Syarif 05211940000051
+Adi Surya Septiantio 05211940000110
+Muhammad Taqi Akmaluddin 05211940000115
+Erlangga Dimastya Persada 05211940000120
+
 ## About Laravel
 
 Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
