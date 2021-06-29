@@ -98,7 +98,7 @@
                 </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="{{ config('http://localhost')}}/sepedas">
+                <a class="nav-link" href="{{ config('http://localhost')}}/sepeda">
                   <i class="ni ni-bullet-list-67 text-default"></i>
                   <span class="nav-link-text">List Sepeda</span>
                 </a>
@@ -387,11 +387,11 @@
     <!-- Header -->
     <div class="tengah">
         <div class="content">
-            <form method="POST" action="{{ config('http://localhost')}}/sepedas">
+            <form method="POST" action="{{ config('http://localhost')}}/sepeda">
                 @csrf
                 <h1> Silahkan tambahkan sepeda disini</h1> <br>
                 <h5 class="tengah">
-                <a href="{{ config('http://localhost')}}/sepedas">Lihat Sepeda</a> <br>
+                <a href="{{ config('http://localhost')}}/sepeda">Lihat Sepeda</a> <br>
             </h5>
 
                 <table class="table"> <br>

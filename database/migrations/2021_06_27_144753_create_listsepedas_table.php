@@ -22,6 +22,8 @@ class CreateListsepedasTable extends Migration
             $table->unsignedInteger('idpetugas');
             $table->string('kualitas_sepeda', 10);
             $table->integer('harga_sepeda');
+            $table->dateTime('created_at');
+            $table->dateTime('updated_at');
         });
     }
 
