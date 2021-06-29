@@ -9,7 +9,7 @@
 
 RBPL A Kelompok 4 :
 Graha Yohanes Napitupulu 05211940000013
-Mohammad Awaluddin Syarif 05211940000051
+Mohammad Awaluddin Syarif 05211940000051 ===
 Adi Surya Septiantio 05211940000110
 Muhammad Taqi Akmaluddin 05211940000115
 Erlangga Dimastya Persada 05211940000120
