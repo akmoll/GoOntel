@@ -39,12 +39,12 @@ class SepedaController extends Controller
     {
         //
         \App\Models\listsepeda::create([
-            'kode' => $request->get('kode'),
-            'merk' => $request->get('merk'),
-            'kualitas' => $request->get('kualitas'),
-            'jenis' => $request->get('jenis'),
-            'warna' => $request->get('warna'),
-            'harga' => $request->get('harga'),
+            'kode_sepeda' => $request->get('kode_sepeda'),
+            'merk_sepeda' => $request->get('merk_sepeda'),
+            'kualitas_sepeda' => $request->get('kualitas_sepeda'),
+            'jenis_sepeda' => $request->get('jenis_sepeda'),
+            'warna_sepeda' => $request->get('warna_sepeda'),
+            'harga_sepeda' => $request->get('harga_sepeda'),
           ]);
 
           return redirect('/sepeda');

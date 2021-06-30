@@ -18,9 +18,8 @@ class CreateListsepedasTable extends Migration
             $table->string('merk_sepeda', 15);
             $table->string('status_sepeda', 10);
             $table->string('jenis_sepeda', 10);
-            $table->foreign('idpetugas')->references('id_petugas')->on('petugas')->unsigned();
-            $table->unsignedInteger('idpetugas');
             $table->string('kualitas_sepeda', 10);
+            $table->string('warna_sepeda', 10);
             $table->integer('harga_sepeda');
             $table->dateTime('created_at');
             $table->dateTime('updated_at');

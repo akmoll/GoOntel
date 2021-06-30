@@ -31,12 +31,24 @@
   <link rel="stylesheet" href="../assets/vendor/@fortawesome/fontawesome-free/css/all.min.css" type="text/css">
   <!-- Argon CSS -->
   <link rel="stylesheet" href="../assets/css/argon.css?v=1.2.0" type="text/css">
-
   <style>
-    div.tengah {
-        text-align: center;
+    table {
+      font-family: arial, sans-serif;
+      border-collapse: collapse;
+      width: 100%;
+    }
+
+    td, th {
+      border: 1px solid #dddddd;
+      text-align: center;
+      padding: 8px;
+    }
+
+    tr:nth-child(even) {
+      background-color: #dddddd;
     }
     </style>
+
 </head>
 
 <body>
@@ -98,7 +110,7 @@
                 </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="{{ config('http://localhost')}}/sepeda">
+                <a class="nav-link" href="{{ config('http://localhost')}}/sepedas">
                   <i class="ni ni-bullet-list-67 text-default"></i>
                   <span class="nav-link-text">List Sepeda</span>
                 </a>
@@ -385,52 +397,55 @@
     </nav>
     <!-- Header -->
     <!-- Header -->
-    <div class="tengah">
-        <div class="content">
-            <form method="POST" action="{{ config('http://localhost')}}/sepeda">
-                @csrf
-                <h1> Silahkan tambahkan sepeda disini</h1> <br>
-                <h5 class="tengah">
-                <a href="{{ config('http://localhost')}}/sepeda">Lihat Sepeda</a> <br>
-            </h5>
-
-                <table class="table"> <br>
-<!--                <div class="form-input">
-                    <label for = "kode">Kode</label> <input id="kode" type="number" name="kode">
-                </div>
-            -->
-                <div class="form-group">
-                    <label>Kode</label> <input type="number" name="kode_sepeda">
-                </div>
-
-                <div class="form-group">
-                    <label>Merk</label> <input type="text" name="merk_sepeda">
-                </div>
-                <div class="form-group">
-                    <label>Kualitas</label> <input type="text" name="kualitas_sepeda">
-                </div>
-
-                <div class="form-group">
-                    <label>Jenis</label> <input type="text" name="jenis_sepeda">
-                </div>
-
-                <div class="form-group">
-                    <label>Warna</label> <input type="text" name="warna_sepeda">
-                </div>
-
-                <div class="form-group">
-                    <label>Harga</label> <input type="text" name="harga_sepeda">
-                </div>
-
-                <button type="submit">Submit</button>
-                <br>
-            </table>
-            </form>
+                    <div class="container-fluid">
+                      <div class="header-body">
+                        <div class="row align-items-center py-4">
+                          <div class="col-lg-6 col-7">
+                            <h6 class="h2 text-white d-inline-block mb-0">Tables</h6>
+                            <nav aria-label="breadcrumb" class="d-none d-md-inline-block ml-md-4">
+                              <ol class="breadcrumb breadcrumb-links breadcrumb-dark">
+                                <li class="breadcrumb-item"><a href="#"><i class="fas fa-home"></i></a></li>
+                                <li class="breadcrumb-item"><a href="{{ config('http://localhost')}}/sepeda">List Sepeda GO-Onthel</a></li>
+                                <li class="breadcrumb-item"><a href="{{ config('http://localhost')}}/sepeda/create">+ Tambah Sepeda</a></li>
+                                <li class="breadcrumb-item active" aria-current="page">:)</li>
+                              </ol>
+                            </nav>
+                          </div>
+                <table class="table">
+                    <thead>
+                        <td>Kode</td>
+                        <td>Merk</td>
+                        <td>Kualitas</td>
+                        <td>Jenis</td>
+                        <td>Warna</td>
+                        <td>Harga</td>
+                    </thead>
+                    <tbody>
+                        @foreach ($allSepedas as $sepeda)
+                            <tr>
+                                <td>{{ $sepeda->kode_sepeda }}</td>
+                                <td class="inner-table">{{ $sepeda->merk_sepeda }}</td>
+                                <td class="inner-table">{{ $sepeda->kualitas_sepeda }}</td>
+                                <td class="inner-table">{{ $sepeda->jenis_sepeda }}</td>
+                                <td class="inner-table">{{ $sepeda->warna_sepeda }}</td>
+                                <td class="inner-table">{{ $sepeda->harga_sepeda }}</td>
+                                <td class="inner-table">{{ $sepeda->status_sepeda }}</td>
+                                'kode_sepeda',
+        'merk_sepeda',
+        'status_sepeda',
+        'jenis_sepeda',
+        'warna_sepeda',
+        'kualitas_sepeda',
+        'harga_sepeda',
+                            </tr>
+                        @endforeach
+                    </tbody>
+                </table>
+            </div>
         </div>
-    </div>
 
-    <!-- Footer -->
-    <footer class="footer pt-0">
+        <!-- Footer -->
+      <footer class="footer pt-0">
         <div class="row align-items-center justify-content-lg-between">
           <div class="col-lg-6">
         <div class="copyright text-center text-xl-left text-muted">

@@ -12,7 +12,7 @@ class listsepeda extends Model
         'merk_sepeda',
         'status_sepeda',
         'jenis_sepeda',
-        'idpetugas',
+        'warna_sepeda',
         'kualitas_sepeda',
         'harga_sepeda',
      ];
