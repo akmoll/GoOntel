@@ -400,26 +400,26 @@
                 </div>
             -->
                 <div class="form-group">
-                    <label>Kode</label> <input type="number" name="kode">
+                    <label>Kode</label> <input type="number" name="kode_sepeda">
                 </div>
 
                 <div class="form-group">
-                    <label>Merk</label> <input type="text" name="merk">
+                    <label>Merk</label> <input type="text" name="merk_sepeda">
                 </div>
                 <div class="form-group">
-                    <label>Kualitas</label> <input type="text" name="kualitas">
-                </div>
-
-                <div class="form-group">
-                    <label>Jenis</label> <input type="text" name="jenis">
+                    <label>Kualitas</label> <input type="text" name="kualitas_sepeda">
                 </div>
 
                 <div class="form-group">
-                    <label>Warna</label> <input type="text" name="warna">
+                    <label>Jenis</label> <input type="text" name="jenis_sepeda">
                 </div>
 
                 <div class="form-group">
-                    <label>Harga</label> <input type="text" name="harga">
+                    <label>Warna</label> <input type="text" name="warna_sepeda">
+                </div>
+
+                <div class="form-group">
+                    <label>Harga</label> <input type="text" name="harga_sepeda">
                 </div>
 
                 <button type="submit">Submit</button>
