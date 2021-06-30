@@ -16,7 +16,7 @@ use Illuminate\Support\Facades\Route;
 
 
 
-Route::get('/', function () {
+Route::get('/welcome', function () {
     return view('welcome');
 });
 
@@ -40,6 +40,14 @@ Route::group(['middleware' => 'auth'], function () {
 
 Route::get('/form', function () {
     return view('formpeminjaman');
+});
+
+Route::get('/', function () {
+    return view('dashpeminjam');
+});
+
+Route::get('/panduan', function () {
+    return view('panduan');
 });
 
 //Route::resource('/form', 'FormController');
