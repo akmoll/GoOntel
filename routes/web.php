@@ -38,9 +38,9 @@ Route::group(['middleware' => 'auth'], function () {
 	Route::put('profile/password', ['as' => 'profile.password', 'uses' => 'App\Http\Controllers\ProfileController@password']);
 });
 
-Route::get('/form', function () {
-    return view('formpeminjaman');
-});
+//Route::get('/form', function () {
+ //   return view('formpeminjaman');
+//});
 
 Route::get('/', function () {
     return view('dashpeminjam');
@@ -57,5 +57,5 @@ Route::get('/panduanpetugas', function () {
 
 Route::get('/detail/read/{id}', 'SepedaController@read');
 
-//Route::resource('/form', 'FormController');
+Route::resource('/form', 'FormController');
 Route::resource('/sepeda', 'SepedaController');

@@ -14,7 +14,7 @@ class FormController extends Controller
     public function index()
     {
         //
-        $form = \App\Models\Form::all();
+        $form = \App\Models\formpinjams::all();
         return view('formpeminjaman', ['form' => $form]);
 
     }
@@ -27,7 +27,7 @@ class FormController extends Controller
     public function create()
     {
         //
-        return view('FormPeminjaman');
+        return view('formpeminjaman');
     }
 
     /**
@@ -39,8 +39,7 @@ class FormController extends Controller
     public function store(Request $request)
     {
         //
-        \App\Models\Form::create([
-            'id_form' => $request->get('id_form'),
+        \App\Models\formpinjams::create([
             'nama_peminjam' => $request->get('nama_peminjam'),
             'nrp' => $request->get('nrp'),
             'fakultas' => $request->get('fakultas'),
@@ -53,7 +52,7 @@ class FormController extends Controller
             'tanggal_kembali' => $request->get('tanggal_kembali'),
           ]);
 
-          return redirect('/form');
+          return redirect('/');
     }
 
     /**

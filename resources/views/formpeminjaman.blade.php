@@ -54,7 +54,7 @@
         <div class="collapse navbar-collapse" id="sidenav-collapse-main">
           <!-- Nav items -->
           <ul class="navbar-nav">
-  
+
             <li class="nav-item">
             <li class="nav-item">
                 <a class="nav-link" href="{{ config('http://localhost')}}/form">
@@ -323,17 +323,17 @@
     <!-- Header -->
     <div class="container">
         <div class="content">
-        <form class= " "method="POST" action="{{ config('http://localhost')}}/sepedas">
+        <form class= " "method="POST" action="{{ config('http://localhost')}}/form">
                 @csrf
 
                 <h1> Formulir Peminjaman Sepeda</h1> <br>
                 <h5 class="tengah">
                 Silahkan isi form dengan benar
             </h5>
-            
+
     <div class="form-group">
         <label for="nama lengkap" class="form-control-label">Nama Lengkap</label>
-        <input class="form-control" type="text" placeholder="Ahmad Taqi" name="nama">
+        <input class="form-control" type="text" placeholder="Ahmad Taqi" name="nama_peminjam">
     </div>
     <div class="form-group">
         <label for="example-search-input" class="form-control-label">NRP</label>
