@@ -413,22 +413,30 @@
                           </div>
                 <table class="table">
                     <thead>
+                        <td>Kode</td>
                         <td>Merk</td>
+                        <td>Kualitas</td>
                         <td>Jenis</td>
                         <td>Warna</td>
-                        <td>Status</td>
-                        <td>Detail</td>
+                        <td>Harga</td>
                     </thead>
                     <tbody>
                         @foreach ($allSepedas as $sepeda)
                             <tr>
+                                <td>{{ $sepeda->kode_sepeda }}</td>
                                 <td class="inner-table">{{ $sepeda->merk_sepeda }}</td>
+                                <td class="inner-table">{{ $sepeda->kualitas_sepeda }}</td>
                                 <td class="inner-table">{{ $sepeda->jenis_sepeda }}</td>
                                 <td class="inner-table">{{ $sepeda->warna_sepeda }}</td>
+                                <td class="inner-table">{{ $sepeda->harga_sepeda }}</td>
                                 <td class="inner-table">{{ $sepeda->status_sepeda }}</td>
-                                <td>
-                                    <a href="/sepeda/detail/{{ $sepeda->kode_sepeda}}"> Detail </a>
-                                </td>
+                                'kode_sepeda',
+        'merk_sepeda',
+        'status_sepeda',
+        'jenis_sepeda',
+        'warna_sepeda',
+        'kualitas_sepeda',
+        'harga_sepeda',
                             </tr>
                         @endforeach
                     </tbody>
