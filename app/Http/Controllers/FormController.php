@@ -19,6 +19,12 @@ class FormController extends Controller
 
     }
 
+    public function indexx()
+    {
+        $lform = \App\Models\formpinjams::all();
+        return view('listform', ['lform' => $lform]);
+    }
+
     /**
      * Show the form for creating a new resource.
      *

@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class formpinjams extends Model
 {
     protected $fillable = [
-        'idform',
+        'id_form',
         'nama_peminjam',
         'nrp',
         'fakultas',
