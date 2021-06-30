@@ -51,6 +51,10 @@
                     <h4 class="text-black">{{ __('6. isi nomer handphone dan email anda dengan valid (yang bisa dihubungi)') }}</h4>
                     <h4 class="text-black">{{ __('7. isi tanggal pinjam dengan memilih hari awal anda inginkan untuk meminjam sepeda') }}</h4>
                     <h4 class="text-black">{{ __('8. isi tanggal kembali dengan hari akhir anda pinjam (hari pengembalian sepeda)') }}</h4>
+                    <br>
+                    <h3 class="text-white">{{ __('Aturan Umum :') }}</h3>
+                    <h4 class="text-black">{{ __('1. Jagalah sepeda yang anda pinjam layaknya sepeda anda sendiri') }}</h4>
+                    <h4 class="text-black">{{ __('2. Pengembalian sepeda melebihi waktu yang telah disepakat akan dikenakan sanksi') }}</h4>
                 </div>
             </div>
         </div>

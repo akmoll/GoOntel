@@ -50,5 +50,9 @@ Route::get('/panduan', function () {
     return view('panduan');
 });
 
+Route::get('/panduanpetugas', function () {
+    return view('panduanpetugas');
+});
+
 //Route::resource('/form', 'FormController');
 Route::resource('/sepeda', 'SepedaController');
