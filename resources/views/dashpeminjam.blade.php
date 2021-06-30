@@ -18,9 +18,9 @@
 -->
 
 
-<div class="header bg-gradient-primary py-1 py-lg-1">
+<div class="header bg-gradient-primary py-5 py-lg-1">
     <div class="container">
-        <div class="header-body text-center mt-7 mb-7">
+        <div class="header-body text-center mt-8 mb-7">
                 <div class="col-lg-5 col-md-6">
                     <h1 class="text-white">{{ __('DASHBOARD PEMINJAMAN SEPEDA') }}</h1>
                 </div>
@@ -28,15 +28,13 @@
         </div>
     </div>
     <div class="separator separator-bottom separator-skew zindex-100">
-        <svg x="0" y="0" viewBox="0 0 2560 100" preserveAspectRatio="none" version="1.1" xmlns="http://www.w3.org/2000/svg">
-            <polygon class="fill-default" points="2560 0 2560 100 0 100"></polygon>
-        </svg>
+
     </div>
 </div>
 
 <div class="header bg-gradient-primary py-1 py-lg-1">
     <div class="container">
-        <div class="header-body text-center mt-7 mb-7">
+        <div class="header-body text-center mt-5 mb-7">
             <div class="row justify-content-center">
                 <div class="col-lg-5 col-md-6">
                     <h2 class="text-white">{{ __('Selamat datang mahasiswa ITS') }}</h2>

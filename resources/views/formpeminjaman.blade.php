@@ -54,38 +54,15 @@
         <div class="collapse navbar-collapse" id="sidenav-collapse-main">
           <!-- Nav items -->
           <ul class="navbar-nav">
+  
             <li class="nav-item">
-                <a class="nav-link" href="{{ route('home') }}">
-                    <i class="ni ni-tv-2 text-primary"></i> {{ __('Dashboard') }}
-                </a>
-            </li>
             <li class="nav-item">
-                <a class="nav-link active" href="#navbar-examples" data-toggle="collapse" role="button" aria-expanded="true" aria-controls="navbar-examples">
-                    <i class="fab fa-laravel" style="color: #f4645f;"></i>
-                    <span class="nav-link-text" style="color: #f4645f;">{{ __('Cek Data') }}</span>
+                <a class="nav-link" href="{{ config('http://localhost')}}/form">
+                  <i class="ni ni-bullet-list-67 text-default"></i>
+                  <span class="nav-link-text">Form Peminjaman</span>
                 </a>
+              </li>
 
-                <div class="collapse show" id="navbar-examples">
-                    <ul class="nav nav-sm flex-column">
-                        <li class="nav-item">
-                            <a class="nav-link" href="{{ route('profile.edit') }}">
-                                {{ __('List Sepeda') }}
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="{{ route('user.index') }}">
-                                {{ __('Riwayat Peminjaman') }}
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </li>
-
-            <li class="nav-item">
-                <a class="nav-link" href="{{ route('icons') }}">
-                    <i class="ni ni-planet text-blue"></i> {{ __('Konfirmasi Form') }}
-                </a>
-            </li>
 
             <li class="nav-item">
                 <a class="nav-link" href="{{ route('table') }}">
@@ -416,35 +393,7 @@
     </div>
 
     <!-- Footer -->
-    <footer class="footer pt-0">
-        <div class="row align-items-center justify-content-lg-between">
-          <div class="col-lg-6">
-        <div class="copyright text-center text-xl-left text-muted">
-            &copy; {{ now()->year }} <a href="https://www.creative-tim.com" class="font-weight-bold ml-1" target="_blank">Creative Tim</a> &amp;
-            <a href="https://www.updivision.com" class="font-weight-bold ml-1" target="_blank">Updivision</a>
-        </div>
-          </div>
-    <div class="col-xl-6">
-        <ul class="nav nav-footer justify-content-center justify-content-xl-end">
-            <li class="nav-item">
-                <a href="https://www.creative-tim.com" class="nav-link" target="_blank">Creative Tim</a>
-            </li>
-            <li class="nav-item">
-                <a href="https://www.updivision.com" class="nav-link" target="_blank">Updivision</a>
-            </li>
-            <li class="nav-item">
-                <a href="https://www.creative-tim.com/presentation" class="nav-link" target="_blank">About Us</a>
-            </li>
-            <li class="nav-item">
-                <a href="http://blog.creative-tim.com" class="nav-link" target="_blank">Blog</a>
-            </li>
-            <li class="nav-item">
-                <a href="https://github.com/creativetimofficial/argon-dashboard/blob/master/LICENSE.md" class="nav-link" target="_blank">MIT License</a>
-            </li>
-        </ul>
-    </div>
-        </div>
-      </footer>
+
     </div>
   </div>
   <!-- Argon Scripts -->

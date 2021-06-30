@@ -92,7 +92,7 @@
                     <div class="collapse show" id="navbar-examples">
                         <ul class="nav nav-sm flex-column">
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ route('profile.edit') }}">
+                            <a class="nav-link" href="{{ config('http://localhost')}}/sepeda">
                                     {{ __('List Sepeda') }}
                                 </a>
                             </li>
@@ -112,7 +112,7 @@
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ route('table') }}">
+                <a class="nav-link" href="{{ config('http://localhost')}}/panduanpetugas">
                       <i class="ni ni-bullet-list-67 text-default"></i>
                       <span class="nav-link-text">Panduan</span>
                     </a>
