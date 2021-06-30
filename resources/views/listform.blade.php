@@ -402,6 +402,7 @@
                         <td>Tanggal Pinjam</td>
                         <td>Tanggal Kembali</td>
                         <td>Status</td>
+                        <td>Konfirmasi </td>
                     </thead>
                     <tbody>
                         @foreach ($lform as $f)
@@ -411,6 +412,9 @@
                                 <td class="inner-table">{{ $f->tanggal_pinjam }}</td>
                                 <td class="inner-table">{{ $f->tanggal_kembali }}</td>
                                 <td class="inner-table">{{ $f->status }}</td>
+                                <td>
+                                    <a href="/form/read/{{ $f->kode_sepeda}}"> Detail </a>
+                                </td>
                             </tr>
                         @endforeach
                     </tbody>

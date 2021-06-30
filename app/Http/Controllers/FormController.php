@@ -105,4 +105,11 @@ class FormController extends Controller
     {
         //
     }
+
+    public function read($id)
+    {
+        //
+        $konf = DB::table('formpinjams')->where('kode_sepeda',$id)->get();
+        return view('konfirmasiform',['konf' => $konf]);
+    }
 }
