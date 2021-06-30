@@ -23,14 +23,14 @@
   <meta name="author" content="Creative Tim">
   <title>Argon Dashboard - Free Dashboard for Bootstrap 4</title>
   <!-- Favicon -->
-  <link rel="icon" href="../assets/img/brand/favicon.png" type="image/png">
+  <link rel="icon" href="{{ asset('/assets/img/brand/favicon.png') }}" type="image/png">
   <!-- Fonts -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700">
   <!-- Icons -->
-  <link rel="stylesheet" href="../assets/vendor/nucleo/css/nucleo.css" type="text/css">
-  <link rel="stylesheet" href="../assets/vendor/@fortawesome/fontawesome-free/css/all.min.css" type="text/css">
+  <link rel="stylesheet" href="{{ asset('assets/vendor/nucleo/css/nucleo.css') }}" type="text/css">
+  <link rel="stylesheet" href=".{{ asset('/assets/vendor/@fortawesome/fontawesome-free/css/all.min.css') }}" type="text/css">
   <!-- Argon CSS -->
-  <link rel="stylesheet" href="../assets/css/argon.css?v=1.2.0" type="text/css">
+  <link rel="stylesheet" href="{{ asset('/assets/css/argon.css?v=1.2.0') }}" type="text/css">
   <style>
     table {
       font-family: arial, sans-serif;
@@ -58,7 +58,7 @@
       <!-- Brand -->
       <div class="sidenav-header  align-items-center">
         <a class="navbar-brand" href="javascript:void(0)">
-          <img src="../assets/img/brand/blue.png" class="navbar-brand-img" alt="...">
+          <img src="{{ asset('/assets/img/brand/blue.png') }}" class="navbar-brand-img" alt="...">
         </a>
       </div>
       <div class="navbar-inner">
@@ -253,7 +253,7 @@
                     <div class="row align-items-center">
                       <div class="col-auto">
                         <!-- Avatar -->
-                        <img alt="Image placeholder" src="../assets/img/theme/team-4.jpg" class="avatar rounded-circle">
+                        <img alt="Image placeholder" src="{{ asset('/assets/img/theme/team-4.jpg') }}" class="avatar rounded-circle">
                       </div>
                       <div class="col ml--2">
                         <div class="d-flex justify-content-between align-items-center">
@@ -343,7 +343,7 @@
               <a class="nav-link pr-0" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 <div class="media align-items-center">
                   <span class="avatar avatar-sm rounded-circle">
-                    <img alt="Image placeholder" src="../assets/img/theme/team-4.jpg">
+                    <img alt="Image placeholder" src="{{ asset('/assets/img/theme/team-4.jpg') }}">
                   </span>
                   <div class="media-body  ml-2  d-none d-lg-block">
                     <span class="mb-0 text-sm  font-weight-bold">John Snow</span>
@@ -391,8 +391,6 @@
                             <nav aria-label="breadcrumb" class="d-none d-md-inline-block ml-md-4">
                               <ol class="breadcrumb breadcrumb-links breadcrumb-dark">
                                 <li class="breadcrumb-item"><a href="#"><i class="fas fa-home"></i></a></li>
-                                <li class="breadcrumb-item"><a href="{{ config('http://localhost')}}/sepeda">List Sepeda GO-Onthel</a></li>
-                                <li class="breadcrumb-item"><a href="{{ config('http://localhost')}}/sepeda/create">+ Tambah Sepeda</a></li>
                                 <li class="breadcrumb-item active" aria-current="page">:)</li>
                               </ol>
                             </nav>
@@ -405,9 +403,10 @@
                         <td>Jenis</td>
                         <td>Warna</td>
                         <td>Harga</td>
+                        <td>Status</td>
                     </thead>
                     <tbody>
-                        @foreach ($allSepedas as $sepeda)
+                        @foreach ($detail as $sepeda)
                             <tr>
                                 <td>{{ $sepeda->kode_sepeda }}</td>
                                 <td class="inner-table">{{ $sepeda->merk_sepeda }}</td>
@@ -416,13 +415,6 @@
                                 <td class="inner-table">{{ $sepeda->warna_sepeda }}</td>
                                 <td class="inner-table">{{ $sepeda->harga_sepeda }}</td>
                                 <td class="inner-table">{{ $sepeda->status_sepeda }}</td>
-                                'kode_sepeda',
-        'merk_sepeda',
-        'status_sepeda',
-        'jenis_sepeda',
-        'warna_sepeda',
-        'kualitas_sepeda',
-        'harga_sepeda',
                             </tr>
                         @endforeach
                     </tbody>

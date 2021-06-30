@@ -50,9 +50,20 @@ Route::get('/panduan', function () {
     return view('panduan');
 });
 
+<<<<<<< Updated upstream
 Route::get('/panduanpetugas', function () {
     return view('panduanpetugas');
 });
+=======
+<<<<<<< HEAD
+
+Route::get('/detail/read/{id}', 'SepedaController@read');
+=======
+Route::get('/panduanpetugas', function () {
+    return view('panduanpetugas');
+});
+>>>>>>> 5f057b4b58c5982c609f249520f54f8f0b3defb6
+>>>>>>> Stashed changes
 
 //Route::resource('/form', 'FormController');
 Route::resource('/sepeda', 'SepedaController');

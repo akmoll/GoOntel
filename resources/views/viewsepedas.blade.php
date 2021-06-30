@@ -98,7 +98,7 @@
                     <i class="ni ni-planet text-blue"></i> {{ __('Konfirmasi Peminjaman') }}
                 </a>
             </li>
-  
+
             <li class="nav-item">
                 <a class="nav-link" href="{{ route('table') }}">
                   <i class="ni ni-bullet-list-67 text-default"></i>
@@ -387,7 +387,7 @@
                                 <td class="inner-table">{{ $sepeda->warna_sepeda }}</td>
                                 <td class="inner-table">{{ $sepeda->status_sepeda }}</td>
                                 <td>
-                                    <a href="/sepeda/detail/{{ $sepeda->kode_sepeda}}"> Detail </a>
+                                    <a href="/detail/read/{{ $sepeda->kode_sepeda}}"> Detail </a>
                                 </td>
                             </tr>
                         @endforeach

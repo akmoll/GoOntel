@@ -18,6 +18,12 @@ class SepedaController extends Controller
         return view('viewsepedas', ['allSepedas' => $sepeda]);
     }
 
+    public function indexx()
+    {
+        $sepeda = \App\Models\listsepeda::all();
+        return view('detailsepeda', ['allSepedas' => $sepeda]);
+    }
+
     /**
      * Show the form for creating a new resource.
      *
@@ -99,4 +105,13 @@ class SepedaController extends Controller
          //alihkan ke halaman pendapatan
          return redirect('/sepeda');
     }
+
+
+    public function read($id)
+    {
+        //
+        $detail = DB::table('listsepedas')->where('kode_sepeda',$id)->get();
+        return view('detailsepeda',['detail' => $detail]);
+    }
+
 }
