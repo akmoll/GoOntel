@@ -56,10 +56,6 @@ Route::get('/panduanpetugas', function () {
 
 
 Route::get('/detail/read/{id}', 'SepedaController@read');
-=======
-Route::get('/panduanpetugas', function () {
-    return view('panduanpetugas');
-})
 
 //Route::resource('/form', 'FormController');
 Route::resource('/sepeda', 'SepedaController');
