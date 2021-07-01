@@ -105,20 +105,6 @@
     <nav class="navbar navbar-top navbar-expand navbar-dark bg-primary border-bottom">
       <div class="container-fluid">
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <!-- Search form -->
-          <form class="navbar-search navbar-search-light form-inline mr-sm-3" id="navbar-search-main">
-            <div class="form-group mb-0">
-              <div class="input-group input-group-alternative input-group-merge">
-                <div class="input-group-prepend">
-                  <span class="input-group-text"><i class="fas fa-search"></i></span>
-                </div>
-                <input class="form-control" placeholder="Search" type="text">
-              </div>
-            </div>
-            <button type="button" class="close" data-action="search-close" data-target="#navbar-search-main" aria-label="Close">
-              <span aria-hidden="true">×</span>
-            </button>
-          </form>
           <!-- Navbar links -->
           <ul class="navbar-nav align-items-center  ml-md-auto ">
             <li class="nav-item d-xl-none">
@@ -376,28 +362,57 @@
             </div>
         </div>
     -->
-        <div class="separator separator-bottom separator-skew zindex-100">
-            <svg x="0" y="0" viewBox="0 0 2560 100" preserveAspectRatio="none" version="1.1" xmlns="http://www.w3.org/2000/svg">
-                <polygon class="fill-default" points="2560 0 2560 100 0 100"></polygon>
-            </svg>
-        </div>
-    </div>
-
-    <div class="header bg-gradient-primary py-1 py-lg-1">
-        <div class="container">
-            <div class="header-body text-center mt-7 mb-7">
-                <div class="row justify-content-center">
-                    <div class="col-lg-5 col-md-6">
-                        <h1 class="text-white">{{ __('Berikut panduan untuk petugas :') }}</h1> <br>
-                        <h3 class="text-black">{{ __('1. Petugas harap login untuk mengkonfirmasi peminjaman') }}</h3>
-                        <h3 class="text-black">{{ __('2. Petugas bisa menerima konfirmasi atau menolak peminjaman yang diajukan') }}</h3>
-                        <h3 class="text-black">{{ __('3. Petugas bisa menginputkan data sepeda baru jika ada') }}</h3>
-                        <h3 class="text-black">{{ __('4. Petugas bisa memeriksa riwayat peminjaman yang pernah dilakukan') }}</h3>
-                        <h3 class="text-black">{{ __('5. ...') }}</h4>
-                        <br><br><br>
-                    </div>
+    <div class="container-fluid mt--6">
+        <div class="row justify-content-center">
+          <div class=" col ">
+            <div class="card">
+              <div class="card-header bg-transparent">
+                <h2 class="mb-0">Panduan Petugas</h2>
+              </div>
+              <div class="card-body">
+                <div class="row icon-examples">
+                  <div class="col-lg-7 col-md-6">
+                    <button type="button" class="btn-icon-clipboard" data-clipboard-text="active-40" title="Copy to clipboard">
+                      <div>
+                        <i class="ni ni-like-2"></i>
+                        <span> Petugas harap login untuk mengkonfirmasi peminjaman</span>
+                      </div>
+                    </button>
+                  </div>
+                  <div class="col-lg-7 col-md-6">
+                    <button type="button" class="btn-icon-clipboard" data-clipboard-text="air-baloon" title="Copy to clipboard">
+                      <div>
+                        <i class="ni ni-like-2"></i>
+                        <span> Petugas bisa menerima konfirmasi atau menolak peminjaman yang diajukan</span>
+                      </div>
+                    </button>
+                  </div>
+                  <div class="col-lg-7 col-md-6">
+                    <button type="button" class="btn-icon-clipboard" data-clipboard-text="album-2" title="Copy to clipboard">
+                      <div>
+                        <i class="ni ni-like-2"></i>
+                        <span> Petugas bisa menginputkan data sepeda baru jika ada</span>
+                      </div>
+                    </button>
+                  </div>
+                  <div class="col-lg-7 col-md-6">
+                    <button type="button" class="btn-icon-clipboard" data-clipboard-text="align-center" title="Copy to clipboard">
+                      <div>
+                        <i class="ni ni-like-2"></i>
+                        <span> Petugas bisa memeriksa riwayat peminjaman yang pernah dilakukan</span>
+                      </div>
+                    </button>
+                  </div>
+                  <div class="col-lg-7 col-md-6">
+                    <button type="button" class="btn-icon-clipboard" data-clipboard-text="align-left-2" title="Copy to clipboard">
+                      <div>
+                        <i class="ni ni-like-2"></i>
+                        <span> etc...</span>
+                      </div>
+                    </button>
+                  </div>
                 </div>
+              </div>
             </div>
+          </div>
         </div>
-    </div>
-    <div class="container mt--10 pb-5"></div>

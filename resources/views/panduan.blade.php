@@ -20,16 +20,137 @@
 
 <div class="header bg-gradient-primary py-1 py-lg-1">
     <div class="container">
-        <div class="header-body text-center mt-7 mb-7">
-                <div class="col-lg-5 col-md-6">
-                    <h1 class="text-white">{{ __('Panduan pengisian form') }}</h1><br>
-                    <a class="text-green" href="{{ config('http://localhost')}}/">Kembali ke dashboard</a><br>
-                    <a class="text-yellow" href="{{ config('http://localhost')}}/form">Isi Form sekarang</a><br>
+      <div class="header-body text-center mt-7 mb-7">
+        <div class="row align-items-center py-4">
+          <div class="col-lg-6 col-md-6">
+              <h6 class="h2 text-white d-inline-block mb-0">Panduan</h6>
+              <nav aria-label="breadcrumb" class="d-none d-md-inline-block ml-md-4">
+                <ol class="breadcrumb breadcrumb-links breadcrumb-dark">
+                  <li class="breadcrumb-item"><a href="{{ config('http://localhost')}}/"><i class="fas fa-home"></i></a></li>
+                  <li class="breadcrumb-item"><a href="{{ config('http://localhost')}}/form">Isi Form Sekarang</a></li>
+                  <li class="breadcrumb-item active" aria-current="page">Peminjaman</li>
+                </ol>
+              </nav>
+            </div>
+  <div class="header bg-gradient-primary py-1 py-lg-1">
+    <div class="container">
+    <div class="header-body text-center mt-7 mb-7">
+  <div class="container-fluid mt--6">
+      <div class="row justify-content-center">
+        <div class=" col-lg-11 col-md-6">
+          <div class="card">
+            <div class="card-header bg-transparent">
+              <h2 class="mb-12">Panduan Pengisian Form</h2>
+            </div>
+            <div class="card-body">
+              <div class="row icon-examples">
+                <div class="col-lg-9 col-md-6">
+                  <button type="button" class="btn-icon-clipboard" data-clipboard-text="active-40" title="Copy to clipboard">
+                    <div>
+                      <i class="ni ni-bold-right"></i>
+                      <span>1. isi nama lengkap dengan benar</span>
+                    </div>
+                  </button>
                 </div>
+                <div class="col-lg-9 col-md-6">
+                  <button type="button" class="btn-icon-clipboard" data-clipboard-text="air-baloon" title="Copy to clipboard">
+                    <div>
+                      <i class="ni ni-bold-right"></i>
+                      <span>2. isi nrp dengan benar</span>
+                    </div>
+                  </button>
+                </div>
+                <div class="col-lg-9 col-md-6">
+                  <button type="button" class="btn-icon-clipboard" data-clipboard-text="album-2" title="Copy to clipboard">
+                    <div>
+                      <i class="ni ni-bold-right"></i>
+                      <span>3. pilih fakultas dan departemen anda</span>
+                    </div>
+                  </button>
+                </div>
+                <div class="col-lg-9 col-md-6">
+                  <button type="button" class="btn-icon-clipboard" data-clipboard-text="align-center" title="Copy to clipboard">
+                    <div>
+                      <i class="ni ni-bold-right"></i>
+                      <span>4. isi kan alamat rumah asli</span>
+                    </div>
+                  </button>
+                </div>
+                <div class="col-lg-9 col-md-6">
+                  <button type="button" class="btn-icon-clipboard" data-clipboard-text="align-left-2" title="Copy to clipboard">
+                    <div>
+                      <i class="ni ni-bold-right"></i>
+                      <span>5. isi kan alamat yang anda tempati saat di surabaya (alamat kos/apart/rumah saudara/dll)</span>
+                    </div>
+                  </button>
+                </div>
+                <div class="col-lg-9 col-md-6">
+                    <button type="button" class="btn-icon-clipboard" data-clipboard-text="align-left-2" title="Copy to clipboard">
+                      <div>
+                        <i class="ni ni-bold-right"></i>
+                        <span>6. isi nomer handphone dan email anda dengan valid (yang bisa dihubungi)</span>
+                      </div>
+                    </button>
+                  </div>
+                  <div class="col-lg-9 col-md-6">
+                    <button type="button" class="btn-icon-clipboard" data-clipboard-text="align-left-2" title="Copy to clipboard">
+                      <div>
+                        <i class="ni ni-bold-right"></i>
+                        <span>7. isi tanggal pinjam dengan memilih hari awal anda inginkan untuk meminjam sepeda</span>
+                      </div>
+                    </button>
+                  </div>
+                  <div class="col-lg-9 col-md-6">
+                    <button type="button" class="btn-icon-clipboard" data-clipboard-text="align-left-2" title="Copy to clipboard">
+                      <div>
+                        <i class="ni ni-bold-right"></i>
+                        <span>8. isi tanggal kembali dengan hari akhir anda pinjam (hari pengembalian sepeda)</span>
+                      </div>
+                    </button>
+                  </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <br><br>
+
+      <div class="header bg-gradient-primary py-1 py-lg-1">
+        <div class="container">
+        <div class="header-body text-center mt-7 mb-7">
+      <div class="container-fluid mt--6">
+          <div class="row justify-content-center">
+            <div class=" col ">
+              <div class="card">
+                <div class="card-header bg-transparent">
+                  <h2 class="mb-12">Aturan Umum</h2>
+                </div>
+                <div class="card-body">
+                  <div class="row icon-examples">
+                    <div class="col-lg-9 col-md-6">
+                      <button type="button" class="btn-icon-clipboard" data-clipboard-text="active-40" title="Copy to clipboard">
+                        <div>
+                          <i class="ni ni-check-bold"></i>
+                          <span>  Jagalah sepeda yang anda pinjam layaknya sepeda anda sendiri</span>
+                        </div>
+                      </button>
+                    </div>
+                    <div class="col-lg-9 col-md-6">
+                      <button type="button" class="btn-icon-clipboard" data-clipboard-text="air-baloon" title="Copy to clipboard">
+                        <div>
+                          <i class="ni ni-check-bold"></i>
+                          <span> Pengembalian sepeda melebihi waktu yang telah disepakat akan dikenakan sanksi    </span>
+                        </div>
+                      </button>
+                    </div>
             </div>
         </div>
+      </div>
     </div>
 
+
+<!--
     <div class="separator separator-bottom separator-skew zindex-100">
         <svg x="0" y="0" viewBox="0 0 2560 100" preserveAspectRatio="none" version="1.1" xmlns="http://www.w3.org/2000/svg">
             <polygon class="fill-default" points="2560 0 2560 100 0 100"></polygon>
@@ -61,7 +182,7 @@
     </div>
 </div>
 <div class="container mt--10 pb-5"></div>
-
+-->
 
 <!DOCTYPE html>
 <html>

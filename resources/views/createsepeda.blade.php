@@ -113,20 +113,6 @@
     <nav class="navbar navbar-top navbar-expand navbar-dark bg-primary border-bottom">
       <div class="container-fluid">
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <!-- Search form -->
-          <form class="navbar-search navbar-search-light form-inline mr-sm-3" id="navbar-search-main">
-            <div class="form-group mb-0">
-              <div class="input-group input-group-alternative input-group-merge">
-                <div class="input-group-prepend">
-                  <span class="input-group-text"><i class="fas fa-search"></i></span>
-                </div>
-                <input class="form-control" placeholder="Search" type="text">
-              </div>
-            </div>
-            <button type="button" class="close" data-action="search-close" data-target="#navbar-search-main" aria-label="Close">
-              <span aria-hidden="true">×</span>
-            </button>
-          </form>
           <!-- Navbar links -->
           <ul class="navbar-nav align-items-center  ml-md-auto ">
             <li class="nav-item d-xl-none">
@@ -346,20 +332,133 @@
     </nav>
     <!-- Header -->
     <!-- Header -->
-    <div class="tengah">
-        <div class="content">
-            <form method="POST" action="{{ config('http://localhost')}}/sepeda">
-                @csrf
-                <h1> Silahkan tambahkan sepeda disini</h1> <br>
-                <h5 class="tengah">
-                <a href="{{ config('http://localhost')}}/sepeda">Lihat Sepeda</a> <br>
-            </h5>
+    <div class="header bg-primary pb-6">
+        <div class="container-fluid">
+          <div class="header-body">
+            <div class="row align-items-center py-4">
+              <div class="col-lg-6 col-7">
+                <h6 class="h2 text-white d-inline-block mb-0">Tambah Sepeda</h6>
+                <nav aria-label="breadcrumb" class="d-none d-md-inline-block ml-md-4">
+                  <ol class="breadcrumb breadcrumb-links breadcrumb-dark">
+                    <li class="breadcrumb-item"><a href="#"><i class="fas fa-home"></i></a></li>
+                    <li class="breadcrumb-item"><a href="{{ config('http://localhost')}}/sepeda">List Sepeda</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Petugas</li>
+                  </ol>
+                </nav>
+              </div>
+              <!--
+              <div class="col-lg-6 col-5 text-right">
+                <a href="#" class="btn btn-sm btn-neutral">New</a>
+                <a href="#" class="btn btn-sm btn-neutral">Filters</a>
+              </div>
+          -->
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container-fluid mt--6">
+          <div class="row justify-content-center">
+            <div class=" col ">
+              <div class="card">
+                <div class="card-header bg-transparent">
+                  <h2 class="mb-0">Tambah Data Sepeda Baru</h2>
+                </div>
 
-                <table class="table"> <br>
 <!--                <div class="form-input">
                     <label for = "kode">Kode</label> <input id="kode" type="number" name="kode">
                 </div>
             -->
+    <div class="content">
+    <form method="POST" action="{{ config('http://localhost')}}/sepeda">
+        @csrf
+    <div class="card">
+        <div class="card-body">
+             <form>
+                <div class="form-group row">
+                    <label for="example-text-input" class="col-md-2 col-form-label form-control-label">Kode</label>
+                        <div class="col-md-6">
+                            <input class="form-control" type="number" name="kode_sepeda">
+                        </div>
+                    </div>
+
+                <div class="form-group row">
+                    <label for="example-text-input" class="col-md-2 col-form-label form-control-label">Merk</label>
+                        <div class="col-md-6">
+                            <input class="form-control" input type="text" name="merk_sepeda">
+                        </div>
+                    </div>
+
+                <div class="form-group row">
+                    <label class="col-md-2 col-form-label form-control-label" for="exampleFormControlSelect1">Kualitas</label>
+                        <select class="col-md-6" name="kualitas_sepeda">
+                            <option>Baik</option>
+                            <option>Sedang</option>
+                            <option>Jelek</option>
+                        </select>
+                    </div>
+
+                <div class="form-group row">
+                    <label class="col-md-2 col-form-label form-control-label" for="exampleFormControlSelect1">Jenis</label>
+                        <select class="col-md-6" name="jenis_sepeda">
+                            <option>Lipat</option>
+                            <option>Gunung</option>
+                            <option>Keranjang</option>
+                            <option>Balap</option>
+                            <option>BMX</option>
+                            <option>Lain lain</option>
+                        </select>
+                    </div>
+
+                <div class="form-group row">
+                    <label for="example-text-input" class="col-md-2 col-form-label form-control-label">Warna</label>
+                        <div class="col-md-6">
+                              <input class="form-control" type="text" name="warna_sepeda">
+                            </div>
+                          </div>
+<!--
+                <div class="form-group row">
+                    <label for="example-text-input" class="col-md-2 col-form-label form-control-label">Harga</label>
+                        <div class="col-md-6">
+                              <input class="form-control" type="text" name="harga_sepeda">
+                            </div>
+                         </div>
+                        -->
+
+                <div class="form-group row">
+                    <label for="example-text-input" class="col-md-2 col-form-label form-control-label">Harga</label>
+                        <div class="col-md-6">
+                            <input class="form-control" type="text" id="rupiah" name="harga_sepeda"/>
+                        </div>
+                    </div>
+
+                         <script type="text/javascript">
+
+                            var rupiah = document.getElementById('rupiah');
+                            rupiah.addEventListener('keyup', function(e){
+                                // tambahkan 'Rp.' pada saat form di ketik
+                                // gunakan fungsi formatRupiah() untuk mengubah angka yang di ketik menjadi format angka
+                                rupiah.value = formatRupiah(this.value, 'Rp. ');
+                            });
+
+                            /* Fungsi formatRupiah */
+                            function formatRupiah(angka, prefix){
+                                var number_string = angka.replace(/[^,\d]/g, '').toString(),
+                                split   		= number_string.split(','),
+                                sisa     		= split[0].length % 3,
+                                rupiah     		= split[0].substr(0, sisa),
+                                ribuan     		= split[0].substr(sisa).match(/\d{3}/gi);
+
+                                // tambahkan titik jika yang di input sudah menjadi angka ribuan
+                                if(ribuan){
+                                    separator = sisa ? '.' : '';
+                                    rupiah += separator + ribuan.join('.');
+                                }
+
+                                rupiah = split[1] != undefined ? rupiah + ',' + split[1] : rupiah;
+                                return prefix == undefined ? rupiah : (rupiah ? 'Rp. ' + rupiah : '');
+                            }
+                        </script>
+    <!--
                 <div class="form-group">
                     <label>Kode</label> <input type="number" name="kode_sepeda">
                 </div>
@@ -376,19 +475,70 @@
                 </div>
 
                 <div class="form-group">
+                    <label for="exampleFormControlSelect1">Jenis</label>
+                    <select class="form-control" name="fakultas">
+                      <option>Lipat</option>
+                      <option>Gunung</option>
+                      <option>Keranjang</option>
+                      <option>Balap</option>
+                      <option>BMX</option>
+                      <option>Lain lain</option>
+                    </select>
+                  </div>
+
+
+                <div class="form-group">
                     <label>Warna</label> <input type="text" name="warna_sepeda">
                 </div>
 
                 <div class="form-group">
                     <label>Harga</label> <input type="text" name="harga_sepeda">
                 </div>
+            -->
 
+<!--
+	<div class="kotak">
+		<p>Ketik jumlah nominal pada form di bawah ini.</p>
+		<span>Nominal Rupiah. :</span>
+		<input type="text" id="rupiah"/>
+	</div>
+
+
+	<script type="text/javascript">
+
+		var rupiah = document.getElementById('rupiah');
+		rupiah.addEventListener('keyup', function(e){
+			// tambahkan 'Rp.' pada saat form di ketik
+			// gunakan fungsi formatRupiah() untuk mengubah angka yang di ketik menjadi format angka
+			rupiah.value = formatRupiah(this.value, 'Rp. ');
+		});
+
+		/* Fungsi formatRupiah */
+		function formatRupiah(angka, prefix){
+			var number_string = angka.replace(/[^,\d]/g, '').toString(),
+			split   		= number_string.split(','),
+			sisa     		= split[0].length % 3,
+			rupiah     		= split[0].substr(0, sisa),
+			ribuan     		= split[0].substr(sisa).match(/\d{3}/gi);
+
+			// tambahkan titik jika yang di input sudah menjadi angka ribuan
+			if(ribuan){
+				separator = sisa ? '.' : '';
+				rupiah += separator + ribuan.join('.');
+			}
+
+			rupiah = split[1] != undefined ? rupiah + ',' + split[1] : rupiah;
+			return prefix == undefined ? rupiah : (rupiah ? 'Rp. ' + rupiah : '');
+		}
+	</script>
+    -->
+
+    <br>
                 <button type="submit">Submit</button>
                 <br>
-            </table>
             </form>
         </div>
-    </div>
+    </div> <br><br>
 
     <!-- Footer -->
     <footer class="footer pt-0">

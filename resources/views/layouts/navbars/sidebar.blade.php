@@ -106,7 +106,7 @@
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ route('icons') }}">
+                    <a class="nav-link" href="{{ config('http://localhost')}}/listform">
                         <i class="ni ni-planet text-blue"></i> {{ __('Konfirmasi Form') }}
                     </a>
                 </li>
