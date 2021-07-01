@@ -16,7 +16,7 @@ class CreateListsepedasTable extends Migration
         Schema::create('listsepedas', function (Blueprint $table) {
             $table->increments('kode_sepeda');
             $table->string('merk_sepeda', 15);
-            $table->string('status_sepeda', 10);
+            $table->string('status_sepeda', 10)->nullable;
             $table->string('jenis_sepeda', 10);
             $table->string('kualitas_sepeda', 10);
             $table->string('warna_sepeda', 10);
