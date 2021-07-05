@@ -371,25 +371,25 @@
                               </ol>
                             </nav>
                           </div>
-                <table class="table">
-                    <thead>
-                        <td>Merk</td>
-                        <td>Jenis</td>
-                        <td>Warna</td>
-                        <td>Status</td>
-                        <td>Detail</td>
+            <div class="table-responsive py-4">
+                <table class="table table-flush" id="datatable-basic">
+                    <thead class="thead-light">
+                    <tr>
+                        <th>Merk</th>
+                        <th>Jenis</th>
+                        <th>Warna</th>
+                        <th>Status</th>
+                      </tr>
                     </thead>
-                    <tbody>
                         @foreach ($allSepedas as $sepeda)
+                        <tfoot>
                             <tr>
-                                <td class="inner-table">{{ $sepeda->merk_sepeda }}</td>
-                                <td class="inner-table">{{ $sepeda->jenis_sepeda }}</td>
-                                <td class="inner-table">{{ $sepeda->warna_sepeda }}</td>
-                                <td class="inner-table">{{ $sepeda->status_sepeda }}</td>
-                                <td>
-                                    <a href="/detail/read/{{ $sepeda->kode_sepeda}}"> Detail </a>
-                                </td>
+                              <th>{{ $sepeda->merk_sepeda }}</th>
+                              <th>{{ $sepeda->jenis_sepeda }}</th>
+                              <th>{{ $sepeda->warna_sepeda }}</th>
+                              <th>{{ $sepeda->status_sepeda }}</th>
                             </tr>
+                          </tfoot>
                         @endforeach
                     </tbody>
                 </table>

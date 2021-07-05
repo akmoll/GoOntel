@@ -16,11 +16,11 @@ class CreateListsepedasTable extends Migration
         Schema::create('listsepedas', function (Blueprint $table) {
             $table->increments('kode_sepeda');
             $table->string('merk_sepeda', 15);
-            $table->string('status_sepeda', 10)->nullable;
+            $table->string('status_sepeda', 10)->default();
             $table->string('jenis_sepeda', 10);
             $table->string('kualitas_sepeda', 10);
             $table->string('warna_sepeda', 10);
-            $table->integer('harga_sepeda');
+            $table->string('harga_sepeda', 15);
             $table->dateTime('created_at');
             $table->dateTime('updated_at');
         });
