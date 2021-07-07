@@ -404,20 +404,22 @@
                           <h2 class="mb-0">Daftar Konfirmasi Peminjaman</h2>
                         </div>
                         <div class="card">
-                          <div class="card-body">   
+                          <div class="card-body">
                             <div class="row">
                               <div class="col-lg-8">
-                              </div>  
+                              </div>
                             </div>
-                <table class="table">
-                    <thead>
-                        <td>ID Form</td>
-                        <td>Nama Peminjam</td>
-                        <td>Tanggal Pinjam</td>
-                        <td>Tanggal Kembali</td>
-                        <td>Status</td>
-                        <td>Konfirmasi </td>
-                    </thead>
+                    <table class="table table-flush" id="datatable-basic">
+                        <thead class="thead-light">
+                          <tr>
+                            <th>ID Form</th>
+                            <th>Nama Peminjam</th>
+                            <th>Tanggal Pinjam</th>
+                            <th>Tanggal Kembali</th>
+                            <th>Status</th>
+                            <th>Konfirmasi</th>
+                          </tr>
+                        </thead>
                     <tbody>
                         @foreach ($lform as $f)
                             <tr>
