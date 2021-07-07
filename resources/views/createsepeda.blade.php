@@ -21,7 +21,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="Start your development with a Dashboard for Bootstrap 4.">
   <meta name="author" content="Creative Tim">
-  <title>Argon Dashboard - Free Dashboard for Bootstrap 4</title>
+  <title>Tambah Sepeda</title>
   <!-- Favicon -->
   <link rel="icon" href="../assets/img/brand/favicon.png" type="image/png">
   <!-- Fonts -->
@@ -98,9 +98,6 @@
           <!-- Divider -->
           <hr class="my-3">
           <!-- Heading -->
-          <h6 class="navbar-heading p-0 text-muted">
-            <span class="docs-normal">Documentation</span>
-          </h6>
           <!-- Navigation -->
 
         </div>
@@ -342,7 +339,6 @@
                   <ol class="breadcrumb breadcrumb-links breadcrumb-dark">
                     <li class="breadcrumb-item"><a href="#"><i class="fas fa-home"></i></a></li>
                     <li class="breadcrumb-item"><a href="{{ config('http://localhost')}}/sepeda">List Sepeda</a></li>
-                    <li class="breadcrumb-item active" aria-current="page">Petugas</li>
                   </ol>
                 </nav>
               </div>
@@ -390,16 +386,19 @@
 
                 <div class="form-group row">
                     <label class="col-md-2 col-form-label form-control-label" for="exampleFormControlSelect1">Kualitas</label>
-                        <select class="col-md-6" name="kualitas_sepeda">
+                    <div class="col-md-6">
+                        <select class="form-control" name="kualitas_sepeda">
                             <option>Baik</option>
                             <option>Sedang</option>
-                            <option>Jelek</option>
+                            <option>Buruk</option>
                         </select>
                     </div>
+                </div>
 
                 <div class="form-group row">
                     <label class="col-md-2 col-form-label form-control-label" for="exampleFormControlSelect1">Jenis</label>
-                        <select class="col-md-6" name="jenis_sepeda">
+                    <div class="col-md-6">
+                        <select class="form-control"  name="jenis_sepeda">
                             <option>Lipat</option>
                             <option>Gunung</option>
                             <option>Keranjang</option>
@@ -408,6 +407,7 @@
                             <option>Lain lain</option>
                         </select>
                     </div>
+                </div>
 
                 <div class="form-group row">
                     <label for="example-text-input" class="col-md-2 col-form-label form-control-label">Warna</label>
@@ -534,7 +534,7 @@
     -->
 
     <br>
-                <button type="submit">Submit</button>
+    <button class="btn btn-primary" type="submit">Tambah Sepeda</button>
                 <br>
             </form>
         </div>
@@ -544,30 +544,7 @@
     <footer class="footer pt-0">
         <div class="row align-items-center justify-content-lg-between">
           <div class="col-lg-6">
-        <div class="copyright text-center text-xl-left text-muted">
-            &copy; {{ now()->year }} <a href="https://www.creative-tim.com" class="font-weight-bold ml-1" target="_blank">Creative Tim</a> &amp;
-            <a href="https://www.updivision.com" class="font-weight-bold ml-1" target="_blank">Updivision</a>
-        </div>
           </div>
-    <div class="col-xl-6">
-        <ul class="nav nav-footer justify-content-center justify-content-xl-end">
-            <li class="nav-item">
-                <a href="https://www.creative-tim.com" class="nav-link" target="_blank">Creative Tim</a>
-            </li>
-            <li class="nav-item">
-                <a href="https://www.updivision.com" class="nav-link" target="_blank">Updivision</a>
-            </li>
-            <li class="nav-item">
-                <a href="https://www.creative-tim.com/presentation" class="nav-link" target="_blank">About Us</a>
-            </li>
-            <li class="nav-item">
-                <a href="http://blog.creative-tim.com" class="nav-link" target="_blank">Blog</a>
-            </li>
-            <li class="nav-item">
-                <a href="https://github.com/creativetimofficial/argon-dashboard/blob/master/LICENSE.md" class="nav-link" target="_blank">MIT License</a>
-            </li>
-        </ul>
-    </div>
         </div>
       </footer>
     </div>
