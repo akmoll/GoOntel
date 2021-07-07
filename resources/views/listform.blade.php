@@ -21,7 +21,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="Start your development with a Dashboard for Bootstrap 4.">
   <meta name="author" content="Creative Tim">
-  <title>Argon Dashboard - Free Dashboard for Bootstrap 4</title>
+  <title>Daftar Konfirmasi Form</title>
   <!-- Favicon -->
   <link rel="icon" href="{{ asset('/assets/img/brand/favicon.png') }}" type="image/png">
   <!-- Fonts -->
@@ -383,18 +383,32 @@
     </nav>
     <!-- Header -->
     <!-- Header -->
+                <div class="header bg-primary pb-6">
                     <div class="container-fluid">
                       <div class="header-body">
                         <div class="row align-items-center py-4">
                           <div class="col-lg-6 col-7">
-                            <h6 class="h2 text-white d-inline-block mb-0">Tables</h6>
+                            <h6 class="h2 text-white d-inline-block mb-0">List Konfirmasi Form</h6>
                             <nav aria-label="breadcrumb" class="d-none d-md-inline-block ml-md-4">
-                              <ol class="breadcrumb breadcrumb-links breadcrumb-dark">
-                                <li class="breadcrumb-item"><a href="#"><i class="fas fa-home"></i></a></li>
-                                <li class="breadcrumb-item active" aria-current="page">:)</li>
-                              </ol>
                             </nav>
                           </div>
+                        </div>
+                      </div>
+                    </div>
+                </div>
+                <div class="container-fluid mt--6">
+                  <div class="row justify-content-center">
+                    <div class=" col ">
+                      <div class="card">
+                        <div class="card-header bg-transparent">
+                          <h2 class="mb-0">Daftar Konfirmasi Peminjaman</h2>
+                        </div>
+                        <div class="card">
+                          <div class="card-body">   
+                            <div class="row">
+                              <div class="col-lg-8">
+                              </div>  
+                            </div>
                 <table class="table">
                     <thead>
                         <td>ID Form</td>
@@ -419,41 +433,17 @@
                         @endforeach
                     </tbody>
                 </table>
-            </div>
-        </div>
 
         <!-- Footer -->
-      <footer class="footer pt-0">
-        <div class="row align-items-center justify-content-lg-between">
-          <div class="col-lg-6">
-        <div class="copyright text-center text-xl-left text-muted">
-            &copy; {{ now()->year }} <a href="https://www.creative-tim.com" class="font-weight-bold ml-1" target="_blank">Creative Tim</a> &amp;
-            <a href="https://www.updivision.com" class="font-weight-bold ml-1" target="_blank">Updivision</a>
-        </div>
-          </div>
-    <div class="col-xl-6">
-        <ul class="nav nav-footer justify-content-center justify-content-xl-end">
-            <li class="nav-item">
-                <a href="https://www.creative-tim.com" class="nav-link" target="_blank">Creative Tim</a>
-            </li>
-            <li class="nav-item">
-                <a href="https://www.updivision.com" class="nav-link" target="_blank">Updivision</a>
-            </li>
-            <li class="nav-item">
-                <a href="https://www.creative-tim.com/presentation" class="nav-link" target="_blank">About Us</a>
-            </li>
-            <li class="nav-item">
-                <a href="http://blog.creative-tim.com" class="nav-link" target="_blank">Blog</a>
-            </li>
-            <li class="nav-item">
-                <a href="https://github.com/creativetimofficial/argon-dashboard/blob/master/LICENSE.md" class="nav-link" target="_blank">MIT License</a>
-            </li>
-        </ul>
+
     </div>
-        </div>
-      </footer>
-    </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
   </div>
+</body>
   <!-- Argon Scripts -->
   <!-- Core -->
   <script src="../assets/vendor/jquery/dist/jquery.min.js"></script>
