@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\FormController;
 
 /*
 |--------------------------------------------------------------------------
@@ -61,3 +62,7 @@ Route::get('/listform', 'FormController@indexx');
 
 Route::resource('/form', 'FormController');
 Route::resource('/sepeda', 'SepedaController');
+
+
+Route::get('/form', [FormController::class, 'dropdown']);
+Route::get('/getDepartments/{id}', [FormController::class, 'getDepartments']);

@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Faculties;
+use App\Models\Departments;
 
 class FormController extends Controller
 {
@@ -112,4 +114,30 @@ class FormController extends Controller
         $konf = DB::table('formpinjams')->where('kode_sepeda',$id)->get();
         return view('konfirmasiform',['konf' => $konf]);
     }
+
+    public function dropdown(){
+
+        // Fetch fakultas
+        $faculties['data'] = Faculties::orderby("name","asc")
+            ->select('id','name')
+            ->get();
+   
+        // Load view
+        return view('formpeminjaman')->with("faculties",$faculties);
+      }
+   
+      // Fetch records
+      public function getDepartments($facultyid=0){
+   
+        // Fetch departemen by facultyid
+        $deptData['data'] = Departments::orderby("name","asc")
+           ->select('id','name')
+           ->where('faculty',$facultyid)
+           ->get();
+   
+        return response()->json($deptData);
+   
+      }
+
+
 }

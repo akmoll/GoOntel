@@ -340,29 +340,70 @@
         <input class="form-control" type="text" placeholder="05211940000123 " name="nrp">
     </div>
     <div class="form-group">
-    <label for="exampleFormControlSelect1">Fakultas</label>
-    <select class="form-control" name="fakultas">
-      <option>FTEIC</option>
-      <option>FTSPK</option>
-      <option>FTIRS</option>
-      <option>FTK</option>
-      <option>FV</option>
-      <option>FSAD</option>
-      <option>FDKBD</option>
+    <label for="fakultas">Fakultas</label>
+    <select class="form-control" name="fakultas" id="fakultas">
+      <option value='0'>-- Pilih Fakultas --</option>
+
+       <!-- Read fakultas -->
+       @foreach($faculties['data'] as $faculty)
+        <option value='{{ $faculty->id }}'>{{ $faculty->name }}</option>
+      @endforeach
+
     </select>
   </div>
+
   <div class="form-group">
-    <label for="exampleFormControlSelect1">Departemen</label>
-    <select class="form-control" name="departemen">
-      <option>1</option>
-      <option>2</option>
-      <option>3</option>
-      <option>4</option>
-      <option>5</option>
-      <option>6</option>
-      <option>7</option>
+    <label for="departemen">Departemen</label>
+    <select class="form-control" name="departemen" id="departemen">
+      <option value='0'>-- Pilih Departemen --</option>
     </select>
+
+    <!-- Script -->
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+   <script type='text/javascript'>
+   $(document).ready(function(){
+
+      // fakultas Change
+      $('#fakultas').change(function(){
+
+         // fakultas id
+         var id = $(this).val();
+
+         // Empty the dropdown
+         $('#departemen').find('option').not(':first').remove();
+
+         // AJAX request 
+         $.ajax({
+           url: 'getDepartments/'+id,
+           type: 'get',
+           dataType: 'json',
+           success: function(response){
+
+             var len = 0;
+             if(response['data'] != null){
+                len = response['data'].length;
+             }
+
+             if(len > 0){
+                // Read data and create <option >
+                for(var i=0; i<len; i++){
+
+                   var id = response['data'][i].id;
+                   var name = response['data'][i].name;
+
+                   var option = "<option value='"+id+"'>"+name+"</option>";
+
+                   $("#departemen").append(option); 
+                }
+             }
+
+           }
+         });
+      });
+   });
+   </script>
   </div>
+
   <div class="form-group">
         <label for="alamat rumah" class="form-control-label">Alamat Rumah</label>
         <input class="form-control" type="text" name="alamat_rumah">
