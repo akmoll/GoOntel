@@ -21,7 +21,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="Start your development with a Dashboard for Bootstrap 4.">
   <meta name="author" content="Creative Tim">
-  <title>Argon Dashboard - Free Dashboard for Bootstrap 4</title>
+  <title>Form Peminjaman Sepeda</title>
   <!-- Favicon -->
   <link rel="icon" href="../assets/img/brand/favicon.png" type="image/png">
   <!-- Fonts -->
@@ -59,7 +59,7 @@
             <li class="nav-item">
                 <a class="nav-link" href="{{ config('http://localhost')}}/form">
                   <i class="ni ni-bullet-list-67 text-default"></i>
-                  <span class="nav-link-text">Form Peminjaman</span>
+                  <span class="nav-link-text">Form Peminjaman Sepeda</span>
                 </a>
               </li>
 
@@ -321,27 +321,43 @@
     </nav>
     <!-- Header -->
     <!-- Header -->
-    <div class="container">
-        <div class="content">
+    <div class="card">
+        <div class="card-header">
         <form class= " "method="POST" action="{{ config('http://localhost')}}/form">
                 @csrf
 
-                <h1> Formulir Peminjaman Sepeda</h1> <br>
-                <h5 class="tengah">
-                Silahkan isi form dengan benar
-            </h5>
+          <h1 class= "mb-0">Formulir Peminjaman Sepeda </h1> 
+          </div>
 
+          <div class="card-body">   
+            <div class="row">
+              <div class="col-lg-8">
+                <h3 class="mb-1">       
+                Silahkan isi form dengan lengkap!
+                </h3>
+              </div>  
+            </div>
+
+      <div class="form-row">
+        <div class="col-md-6">          
     <div class="form-group">
         <label for="nama lengkap" class="form-control-label">Nama Lengkap</label>
-        <input class="form-control" type="text" placeholder="Ahmad Taqi" name="nama_peminjam">
+        <input class="form-control" type="text" placeholder="Ahmad Taqi" name="nama_peminjam" required>
     </div>
+      </div> 
+      <div class="col-md-6">  
     <div class="form-group">
-        <label for="example-search-input" class="form-control-label">NRP</label>
-        <input class="form-control" type="text" placeholder="05211940000123 " name="nrp">
+        <label for="nrp" class="form-control-label">NRP</label>
+        <input class="form-control" type="text" placeholder="05211940000123 " name="nrp" required>
     </div>
+      </div>
+      </div>
+
+    <div class="form-row">
+      <div class="col-md-6">
     <div class="form-group">
     <label for="fakultas">Fakultas</label>
-    <select class="form-control" name="fakultas" id="fakultas">
+    <select class="form-control" name="fakultas" id="fakultas" required>
       <option value='0'>-- Pilih Fakultas --</option>
 
        <!-- Read fakultas -->
@@ -350,11 +366,12 @@
       @endforeach
 
     </select>
-  </div>
-
+    </div>
+      </div>
+      <div class="col-md-6">
   <div class="form-group">
     <label for="departemen">Departemen</label>
-    <select class="form-control" name="departemen" id="departemen">
+    <select class="form-control" name="departemen" id="departemen" required>
       <option value='0'>-- Pilih Departemen --</option>
     </select>
 
@@ -403,32 +420,56 @@
    });
    </script>
   </div>
+    </div>
+    </div>
 
+  <div class="form-row">
+    <div class="col-md-6">
   <div class="form-group">
         <label for="alamat rumah" class="form-control-label">Alamat Rumah</label>
-        <input class="form-control" type="text" name="alamat_rumah">
+        <input class="form-control" type="text" name="alamat_rumah" required>
     </div>
+  </div>
+  <div class="col-md-6">
     <div class="form-group">
         <label for="alamat rumah" class="form-control-label">Alamat Surabaya</label>
-        <input class="form-control" type="text" name="alamat_sby">
+        <input class="form-control" type="text" name="alamat_sby"required>
     </div>
+  </div>
+  </div>
+
+    <div class="form-row">
+      <div class="col-md-6">
     <div class="form-group">
         <label for="no hp" class="form-control-label">No HP</label>
-        <input class="form-control" type="tel" placeholder="081234567890" name="nohp">
+        <input class="form-control" type="tel" placeholder="081234567890" name="nohp" required>
     </div>
+      </div>
+      <div class="col-md-6">
     <div class="form-group">
         <label for="email" class="form-control-label">Email</label>
-        <input class="form-control" type="email" placeholder="example@mail.com" name="email">
+        <input class="form-control" type="email" placeholder="example@mail.com" name="email" required>
     </div>
+    </div>
+          </div>
+
+    <div class="form-row">
+      <div class="col-md-6">
     <div class="form-group">
         <label for="tanggal pinjam" class="form-control-label">Tanggal Pinjam</label>
-        <input class="form-control" type="datetime-local" name="tanggal_pinjam">
+        <input class="form-control" type="datetime-local" name="tanggal_pinjam" required>
     </div>
+      </div>
+      <div class="col-md-6">
     <div class="form-group">
         <label for="tanggal kembali" class="form-control-label">Tanggal Kembali</label>
-        <input class="form-control" type="datetime-local" name="tanggal_kembali">
+        <input class="form-control" type="datetime-local" name="tanggal_kembali" required>
     </div>
-    <button class="btn btn-primary btn-neutral">Submit</button>
+    </div>
+    </div>
+    <div>
+    <button class="btn btn-primary" type="submit">Submit form</button>
+          </div>
 </form>
         </div>
     </div>
