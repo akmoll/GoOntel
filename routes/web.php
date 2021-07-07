@@ -66,3 +66,7 @@ Route::resource('/sepeda', 'SepedaController');
 
 Route::get('/form', [FormController::class, 'dropdown']);
 Route::get('/getDepartments/{id}', [FormController::class, 'getDepartments']);
+
+Route::get('/submit', function () {
+    return view('submitform');
+});

@@ -120,161 +120,34 @@
           <div class=" col ">
             <div class="card">
               <div class="card-header bg-transparent">
-                <h2 class="mb-0 text-center">Formulir Peminjaman Sepeda</h2>
+                <h1 class="display-3 text-center">FORMULIR BERHASIL DISUBMIT</h1>
               </div>
     <!-- Header -->
     <div class="card">
-        <form class= "needs-validation "method="POST" action="{{ config('http://localhost')}}/form">
+        <form class= " "method="POST" action="{{ config('http://localhost')}}/form">
                 @csrf
 
           <div class="card-body">   
-            <div class="row">
-              <div class="col-lg-8">
-                <h3 class="mb-1">       
-                Silahkan isi form dengan lengkap!
+            <div class="row justify-content-center">
+                <h1 class="display-4">       
+                Terima Kasih
                 </h3>
-              </div>  
+                <br>
             </div>
-
-      <div class="form-row">
-        <div class="col-md-6">          
-    <div class="form-group">
-        <label for="nama lengkap" class="form-control-label">Nama Lengkap</label>
-        <input class="form-control" type="text" placeholder="Ahmad Taqi" name="nama_peminjam" required>
-    </div>
-      </div> 
-      <div class="col-md-6">  
-    <div class="form-group">
-        <label for="nrp" class="form-control-label">NRP</label>
-        <input class="form-control" type="text" placeholder="05211940000123 " name="nrp" required>
-    </div>
-      </div>
-      </div>
-
-    <div class="form-row">
-      <div class="col-md-6">
-    <div class="form-group">
-    <label for="fakultas">Fakultas</label>
-    <select class="form-control" name="fakultas" id="fakultas" required>
-      <option value=''>-- Pilih Fakultas --</option>
-
-       <!-- Read fakultas -->
-       @foreach($faculties['data'] as $faculty)
-        <option value='{{ $faculty->id }}'>{{ $faculty->name }}</option>
-      @endforeach
-
-    </select>
-    </div>
-      </div>
-      <div class="col-md-6">
-  <div class="form-group">
-    <label for="departemen">Departemen</label>
-    <select class="form-control" name="departemen" id="departemen" required>
-      <option value=''>-- Pilih Departemen --</option>
-    </select>
-
-    <!-- Script -->
-   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-   <script type='text/javascript'>
-   $(document).ready(function(){
-
-      // fakultas Change
-      $('#fakultas').change(function(){
-
-         // fakultas id
-         var id = $(this).val();
-
-         // Empty the dropdown
-         $('#departemen').find('option').not(':first').remove();
-
-         // AJAX request 
-         $.ajax({
-           url: 'getDepartments/'+id,
-           type: 'get',
-           dataType: 'json',
-           success: function(response){
-
-             var len = 0;
-             if(response['data'] != null){
-                len = response['data'].length;
-             }
-
-             if(len > 0){
-                // Read data and create <option >
-                for(var i=0; i<len; i++){
-
-                   var id = response['data'][i].id;
-                   var name = response['data'][i].name;
-
-                   var option = "<option value='"+id+"'>"+name+"</option>";
-
-                   $("#departemen").append(option); 
-                }
-             }
-
-           }
-         });
-      });
-   });
-   </script>
-  </div>
-    </div>
-    </div>
-
-  <div class="form-row">
-    <div class="col-md-6">
-  <div class="form-group">
-        <label for="alamat rumah" class="form-control-label">Alamat Rumah</label>
-        <input class="form-control" type="text" name="alamat_rumah" required>
-    </div>
-  </div>
-  <div class="col-md-6">
-    <div class="form-group">
-        <label for="alamat rumah" class="form-control-label">Alamat Surabaya</label>
-        <input class="form-control" type="text" name="alamat_sby"required>
-    </div>
-  </div>
-  </div>
-
-    <div class="form-row">
-      <div class="col-md-6">
-    <div class="form-group">
-        <label for="no hp" class="form-control-label">No HP</label>
-        <input class="form-control" type="tel" placeholder="081234567890" name="nohp" required>
-    </div>
-      </div>
-      <div class="col-md-6">
-    <div class="form-group">
-        <label for="email" class="form-control-label">Email</label>
-        <input class="form-control" type="email" placeholder="example@mail.com" name="email" required>
-    </div>
-    </div>
-          </div>
-
-    <div class="form-row">
-      <div class="col-md-6">
-    <div class="form-group">
-        <label for="tanggal pinjam" class="form-control-label">Tanggal Pinjam</label>
-        <input class="form-control" type="datetime-local" name="tanggal_pinjam" required>
-    </div>
-      </div>
-      <div class="col-md-6">
-    <div class="form-group">
-        <label for="tanggal kembali" class="form-control-label">Tanggal Kembali</label>
-        <input class="form-control" type="datetime-local" name="tanggal_kembali" required>
-    </div>
-    </div>
-    </div>
-    <div>
-    <a href="{{ config('http://localhost')}}/submit" class="btn btn-primary" type="submit" required>Submit form</a>
-          </div>
-</form>
+              <div class="row justify-content-center">
+                <div>
+                    <button class="btn btn-primary" type="submit">Kembali Ke Dashboard</button>
+                </div>
+              </div>
         </div>
-    </div>
 
     <!-- Footer -->
-
     </div>
+            </div>
+          </div>
+        </div>
+    </div>
+  </div>
   </div>
   <!-- Argon Scripts -->
   <!-- Core -->
