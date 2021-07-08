@@ -266,7 +266,7 @@
     </div>
     </div>
     <div>
-    <a href="{{ config('http://localhost')}}/submit" class="btn btn-primary" type="submit" required>Submit form</a>
+    <button class="btn btn-primary" type="submit" required>Submit form</button>
           </div>
 </form>
         </div>
