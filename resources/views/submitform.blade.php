@@ -136,7 +136,7 @@
             </div>
               <div class="row justify-content-center">
                 <div>
-                    <button class="btn btn-primary" type="submit">Kembali Ke Dashboard</button>
+                    <a class="btn btn-primary" href="{{ config('http://localhost')}}/" type="submit">Kembali Ke Dashboard</a>
                 </div>
               </div>
         </div>

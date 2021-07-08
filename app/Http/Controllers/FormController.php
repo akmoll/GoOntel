@@ -60,7 +60,7 @@ class FormController extends Controller
             'tanggal_kembali' => $request->get('tanggal_kembali'),
           ]);
 
-          return redirect('/');
+          return redirect('/submit');
     }
 
     /**
