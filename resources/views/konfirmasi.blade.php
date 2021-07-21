@@ -38,8 +38,8 @@
                             <td>{{ $row->tanggal_kembali }}</td>
                             <td>
                              <form action="{{ route('konfirmasi_pembayaran.destroy', $row->id_form) }}" method="post">
-                               <a href="{{ route('konfirmasi_pembayaran.show', $row->id) }}" class="btn btn-primary">Terima</a>
-                               <a href="{{ route('konfirmasi_pembayaran.edit', $row->id) }}" class="btn btn-warning">Tolak</a>
+                               <a href="{{ route('konfirmasi_pembayaran.show', $row->id_form) }}" class="btn btn-primary">Terima</a>
+                               <a href="{{ route('konfirmasi_pembayaran.edit', $row->id_form) }}" class="btn btn-warning">Tolak</a>
                                @csrf
                              </form>
                            </td>
