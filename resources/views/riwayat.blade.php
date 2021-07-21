@@ -388,7 +388,7 @@
                       <div class="header-body">
                         <div class="row align-items-center py-4">
                           <div class="col-lg-6 col-7">
-                            <h6 class="h2 text-white d-inline-block mb-0">List Konfirmasi Form</h6>
+                            <h6 class="h2 text-white d-inline-block mb-0">Daftar Riwayat Peminjaman</h6>
                             <nav aria-label="breadcrumb" class="d-none d-md-inline-block ml-md-4">
                             </nav>
                           </div>
@@ -401,7 +401,7 @@
                     <div class=" col ">
                       <div class="card">
                         <div class="card-header bg-transparent">
-                          <h2 class="mb-0">Daftar Konfirmasi Peminjaman</h2>
+                          <h2 class="mb-0">Riwayat Peminjaman</h2>
                         </div>
                         <div class="card">
                           <div class="card-body">
@@ -417,20 +417,17 @@
                             <th>Tanggal Pinjam</th>
                             <th>Tanggal Kembali</th>
                             <th>Status</th>
-                            <th>Konfirmasi</th>
                           </tr>
                         </thead>
                     <tbody>
-                        @foreach ($lform as $f)
+                        @foreach ($riwayat as $r)
                             <tr>
-                                <td >{{ $f->id_form }}</td>
-                                <td class="inner-table">{{ $f->nama_peminjam }}</td>
-                                <td class="inner-table">{{ $f->tanggal_pinjam }}</td>
-                                <td class="inner-table">{{ $f->tanggal_kembali }}</td>
-                                <td class="inner-table">{{ $f->status }}</td>
+                                <td >{{ $r->id_form }}</td>
+                                <td class="inner-table">{{ $r->nama_peminjam }}</td>
+                                <td class="inner-table">{{ $r->tanggal_pinjam }}</td>
+                                <td class="inner-table">{{ $r->tanggal_kembali }}</td>
+                                <td class="inner-table">{{ $r->status }}</td>
                                 <td>
-                                    <a href="/form/read/{{ $f->kode_sepeda}}"> Detail </a>
-                                </td>
                             </tr>
                         @endforeach
                     </tbody>

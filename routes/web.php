@@ -74,3 +74,7 @@ Route::get('/submit', function () {
 Route::get('/konfirmasi', function () {
     return view('konfirmasi');
 });
+
+Route::get('/riwayat', function () {
+    return view('riwayat');
+});
