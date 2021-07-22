@@ -387,7 +387,9 @@
                               <th>{{ $sepeda->merk_sepeda }}</th>
                               <th>{{ $sepeda->jenis_sepeda }}</th>
                               <th>{{ $sepeda->warna_sepeda }}</th>
-                              <th>{{ $sepeda->status_sepeda }}</th>
+                              <th>
+                                <a href="/detail/read/{{ $sepeda->kode_sepeda}}"> Detail </a>
+                              </th>
                             </tr>
                           </tfoot>
                         @endforeach

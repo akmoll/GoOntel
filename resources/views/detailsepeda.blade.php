@@ -395,30 +395,30 @@
                               </ol>
                             </nav>
                           </div>
-                <table class="table">
-                    <thead>
-                        <td>Kode</td>
-                        <td>Merk</td>
-                        <td>Kualitas</td>
-                        <td>Jenis</td>
-                        <td>Warna</td>
-                        <td>Harga</td>
-                        <td>Status</td>
-                    </thead>
-                    <tbody>
-                        @foreach ($detail as $sepeda)
+                          <table class="table table-flush" id="datatable-basic">
+                            <thead>
+                                <th>Kode</th>
+                                <th>Merk</th>
+                                <th>Kualitas</th>
+                                <th>Jenis</th>
+                                <th>Warna</th>
+                                <th>Harga</th>
+                                <th>Status</th>
+                            </thead>
+                            @foreach ($detail as $sepeda)
+                            <tfoot>
                             <tr>
-                                <td>{{ $sepeda->kode_sepeda }}</td>
-                                <td class="inner-table">{{ $sepeda->merk_sepeda }}</td>
-                                <td class="inner-table">{{ $sepeda->kualitas_sepeda }}</td>
-                                <td class="inner-table">{{ $sepeda->jenis_sepeda }}</td>
-                                <td class="inner-table">{{ $sepeda->warna_sepeda }}</td>
-                                <td class="inner-table">{{ $sepeda->harga_sepeda }}</td>
-                                <td class="inner-table">{{ $sepeda->status_sepeda }}</td>
+                                <th>{{ $sepeda->kode_sepeda }}</th>
+                                <th class="inner-table">{{ $sepeda->merk_sepeda }}</th>
+                                <th class="inner-table">{{ $sepeda->kualitas_sepeda }}</th>
+                                <th class="inner-table">{{ $sepeda->jenis_sepeda }}</th>
+                                <th class="inner-table">{{ $sepeda->warna_sepeda }}</th>
+                                <th class="inner-table">{{ $sepeda->harga_sepeda }}</th>
+                                <th class="inner-table">{{ $sepeda->status_sepeda }}</th>
                             </tr>
                         @endforeach
-                    </tbody>
-                </table>
+                            </tbody>
+                        </table>
             </div>
         </div>
 
