@@ -70,3 +70,11 @@ Route::get('/getDepartments/{id}', [FormController::class, 'getDepartments']);
 Route::get('/submit', function () {
     return view('submitform');
 });
+
+Route::get('/konfirmasi', function () {
+    return view('konfirmasi');
+});
+
+Route::get('/riwayat', function () {
+    return view('riwayat');
+});

@@ -1,4 +1,3 @@
-
 <!--
 =========================================================
 * Argon Dashboard - v1.2.0
@@ -22,16 +21,34 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="Start your development with a Dashboard for Bootstrap 4.">
   <meta name="author" content="Creative Tim">
-  <title>Panduan Petugas</title>
+  <title>Daftar Konfirmasi Form</title>
   <!-- Favicon -->
-  <link rel="icon" href="../assets/img/brand/favicon.png" type="image/png">
+  <link rel="icon" href="{{ asset('/assets/img/brand/favicon.png') }}" type="image/png">
   <!-- Fonts -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700">
   <!-- Icons -->
-  <link rel="stylesheet" href="../assets/vendor/nucleo/css/nucleo.css" type="text/css">
-  <link rel="stylesheet" href="../assets/vendor/@fortawesome/fontawesome-free/css/all.min.css" type="text/css">
+  <link rel="stylesheet" href="{{ asset('assets/vendor/nucleo/css/nucleo.css') }}" type="text/css">
+  <link rel="stylesheet" href=".{{ asset('/assets/vendor/@fortawesome/fontawesome-free/css/all.min.css') }}" type="text/css">
   <!-- Argon CSS -->
-  <link rel="stylesheet" href="../assets/css/argon.css?v=1.2.0" type="text/css">
+  <link rel="stylesheet" href="{{ asset('/assets/css/argon.css?v=1.2.0') }}" type="text/css">
+  <style>
+    table {
+      font-family: arial, sans-serif;
+      border-collapse: collapse;
+      width: 100%;
+    }
+
+    td, th {
+      border: 1px solid #dddddd;
+      text-align: center;
+      padding: 8px;
+    }
+
+    tr:nth-child(even) {
+      background-color: #dddddd;
+    }
+    </style>
+
 </head>
 
 <body>
@@ -41,7 +58,7 @@
       <!-- Brand -->
       <div class="sidenav-header  align-items-center">
         <a class="navbar-brand" href="javascript:void(0)">
-          <img src="../assets/img/brand/blue.png" class="navbar-brand-img" alt="...">
+          <img src="{{ asset('/assets/img/brand/blue.png') }}" class="navbar-brand-img" alt="...">
         </a>
       </div>
       <div class="navbar-inner">
@@ -68,7 +85,7 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ route('user.index') }}">
+                            <a class="nav-link" href="{{ config('http://localhost')}}/riwayat">
                                 {{ __('Riwayat Peminjaman') }}
                             </a>
                         </li>
@@ -77,7 +94,7 @@
             </li>
 
             <li class="nav-item">
-                <a class="nav-link" href="{{ config('http://localhost')}}/listform">
+                <a class="nav-link" href="{{ config('http://localhost')}}/konfirmasi">
                     <i class="ni ni-planet text-blue"></i> {{ __('Konfirmasi Form') }}
                 </a>
             </li>
@@ -93,9 +110,36 @@
           <!-- Divider -->
           <hr class="my-3">
           <!-- Heading -->
-
+          <h6 class="navbar-heading p-0 text-muted">
+            <span class="docs-normal">Documentation</span>
+          </h6>
           <!-- Navigation -->
-
+          <ul class="navbar-nav mb-md-3">
+            <li class="nav-item">
+              <a class="nav-link" href="https://demos.creative-tim.com/argon-dashboard/docs/getting-started/overview.html" target="_blank">
+                <i class="ni ni-spaceship"></i>
+                <span class="nav-link-text">Getting started</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="https://demos.creative-tim.com/argon-dashboard/docs/foundation/colors.html" target="_blank">
+                <i class="ni ni-palette"></i>
+                <span class="nav-link-text">Foundation</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="https://demos.creative-tim.com/argon-dashboard/docs/components/alerts.html" target="_blank">
+                <i class="ni ni-ui-04"></i>
+                <span class="nav-link-text">Components</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="https://demos.creative-tim.com/argon-dashboard/docs/plugins/charts.html" target="_blank">
+                <i class="ni ni-chart-pie-35"></i>
+                <span class="nav-link-text">Plugins</span>
+              </a>
+            </li>
+          </ul>
         </div>
       </div>
     </div>
@@ -106,6 +150,20 @@
     <nav class="navbar navbar-top navbar-expand navbar-dark bg-primary border-bottom">
       <div class="container-fluid">
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <!-- Search form -->
+          <form class="navbar-search navbar-search-light form-inline mr-sm-3" id="navbar-search-main">
+            <div class="form-group mb-0">
+              <div class="input-group input-group-alternative input-group-merge">
+                <div class="input-group-prepend">
+                  <span class="input-group-text"><i class="fas fa-search"></i></span>
+                </div>
+                <input class="form-control" placeholder="Search" type="text">
+              </div>
+            </div>
+            <button type="button" class="close" data-action="search-close" data-target="#navbar-search-main" aria-label="Close">
+              <span aria-hidden="true">×</span>
+            </button>
+          </form>
           <!-- Navbar links -->
           <ul class="navbar-nav align-items-center  ml-md-auto ">
             <li class="nav-item d-xl-none">
@@ -119,8 +177,14 @@
               </div>
             </li>
             <li class="nav-item d-sm-none">
+              <a class="nav-link" href="#" data-action="search-show" data-target="#navbar-search-main">
+                <i class="ni ni-zoom-split-in"></i>
+              </a>
             </li>
             <li class="nav-item dropdown">
+              <a class="nav-link" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <i class="ni ni-bell-55"></i>
+              </a>
               <div class="dropdown-menu dropdown-menu-xl  dropdown-menu-right  py-0 overflow-hidden">
                 <!-- Dropdown header -->
                 <div class="px-3 py-3">
@@ -189,7 +253,7 @@
                     <div class="row align-items-center">
                       <div class="col-auto">
                         <!-- Avatar -->
-                        <img alt="Image placeholder" src="../assets/img/theme/team-4.jpg" class="avatar rounded-circle">
+                        <img alt="Image placeholder" src="{{ asset('/assets/img/theme/team-4.jpg') }}" class="avatar rounded-circle">
                       </div>
                       <div class="col ml--2">
                         <div class="d-flex justify-content-between align-items-center">
@@ -229,6 +293,9 @@
               </div>
             </li>
             <li class="nav-item dropdown">
+              <a class="nav-link" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <i class="ni ni-ungroup"></i>
+              </a>
               <div class="dropdown-menu dropdown-menu-lg dropdown-menu-dark bg-default  dropdown-menu-right ">
                 <div class="row shortcuts px-4">
                   <a href="#!" class="col-4 shortcut-item">
@@ -276,7 +343,7 @@
               <a class="nav-link pr-0" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 <div class="media align-items-center">
                   <span class="avatar avatar-sm rounded-circle">
-                    <img alt="Image placeholder" src="../assets/img/theme/team-4.jpg">
+                    <img alt="Image placeholder" src="{{ asset('/assets/img/theme/team-4.jpg') }}">
                   </span>
                   <div class="media-body  ml-2  d-none d-lg-block">
                     <span class="mb-0 text-sm  font-weight-bold">John Snow</span>
@@ -316,94 +383,75 @@
     </nav>
     <!-- Header -->
     <!-- Header -->
-    <div class="header bg-primary pb-6">
-      <div class="container-fluid">
-        <div class="header-body">
-          <div class="row align-items-center py-4">
-            <div class="col-lg-6 col-7">
-              <h6 class="h2 text-white d-inline-block mb-0">Panduan</h6>
-              <nav aria-label="breadcrumb" class="d-none d-md-inline-block ml-md-4">
-                <ol class="breadcrumb breadcrumb-links breadcrumb-dark">
-                  <li class="breadcrumb-item"><a href="{{ config('http://localhost')}}/home"><i class="fas fa-home"></i></a></li>
-                  <li class="breadcrumb-item"><a href="{{ config('http://localhost')}}/panduanpetugas">Panduan Petugas</a></li>
-                </ol>
-              </nav>
-            </div>
-            <!--
-            <div class="col-lg-6 col-5 text-right">
-              <a href="#" class="btn btn-sm btn-neutral">New</a>
-              <a href="#" class="btn btn-sm btn-neutral">Filters</a>
-            </div>
-        -->
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Content -->
-<!--    <div class="header bg-gradient-primary py-1 py-lg-1">
-        <div class="container">
-            <div class="header-body text-center mt-7 mb-7">
-                    <div class="col-lg-5 col-md-6">
-                        <h1 class="text-white">{{ __('Panduan Petugas') }}</h1><br>
-                        <a class="text-green" href="{{ config('http://localhost')}}/#">Kembali ke dashboard</a><br>
-                        <a class="text-yellow" href="{{ config('http://localhost')}}/#">Isi Form sekarang</a><br>
+                <div class="header bg-primary pb-6">
+                    <div class="container-fluid">
+                      <div class="header-body">
+                        <div class="row align-items-center py-4">
+                          <div class="col-lg-6 col-7">
+                            <h6 class="h2 text-white d-inline-block mb-0">Daftar Riwayat Peminjaman</h6>
+                            <nav aria-label="breadcrumb" class="d-none d-md-inline-block ml-md-4">
+                            </nav>
+                          </div>
+                        </div>
+                      </div>
                     </div>
                 </div>
-            </div>
-        </div>
-    -->
-    <div class="container-fluid mt--6">
-        <div class="row justify-content-center">
-          <div class=" col ">
-            <div class="card">
-              <div class="card-header bg-transparent">
-                <h2 class="mb-0">Panduan Petugas</h2>
-              </div>
-              <div class="card-body">
-                <div class="row icon-examples">
-                  <div class="col-lg-7 col-md-6">
-                    <button type="button" class="btn-icon-clipboard" data-clipboard-text="active-40" title="Copy to clipboard">
-                      <div>
-                        <i class="ni ni-like-2"></i>
-                        <span> Petugas harap login untuk mengkonfirmasi peminjaman</span>
+                <div class="container-fluid mt--6">
+                  <div class="row justify-content-center">
+                    <div class=" col ">
+                      <div class="card">
+                        <div class="card-header bg-transparent">
+                          <h2 class="mb-0">Riwayat Peminjaman</h2>
+                        </div>
+                        <div class="card">
+                          <div class="card-body">
+                            <div class="row">
+                              <div class="col-lg-8">
+                              </div>
+                            </div>
+                    <table class="table table-flush" id="datatable-basic">
+                        <thead class="thead-light">
+                          <tr>
+                            <th>ID Form</th>
+                            <th>Nama Peminjam</th>
+                            <th>Tanggal Pinjam</th>
+                            <th>Tanggal Kembali</th>
+                            <th>Status</th>
+                          </tr>
+                        </thead>
+                    <tbody>
+                        @foreach ($riwayat as $r)
+                            <tr>
+                                <td >{{ $r->id_form }}</td>
+                                <td class="inner-table">{{ $r->nama_peminjam }}</td>
+                                <td class="inner-table">{{ $r->tanggal_pinjam }}</td>
+                                <td class="inner-table">{{ $r->tanggal_kembali }}</td>
+                                <td class="inner-table">{{ $r->status }}</td>
+                                <td>
+                            </tr>
+                        @endforeach
+                    </tbody>
+                </table>
+
+        <!-- Footer -->
+
+    </div>
+                        </div>
                       </div>
-                    </button>
-                  </div>
-                  <div class="col-lg-7 col-md-6">
-                    <button type="button" class="btn-icon-clipboard" data-clipboard-text="air-baloon" title="Copy to clipboard">
-                      <div>
-                        <i class="ni ni-like-2"></i>
-                        <span> Petugas bisa menerima konfirmasi atau menolak peminjaman yang diajukan</span>
-                      </div>
-                    </button>
-                  </div>
-                  <div class="col-lg-7 col-md-6">
-                    <button type="button" class="btn-icon-clipboard" data-clipboard-text="album-2" title="Copy to clipboard">
-                      <div>
-                        <i class="ni ni-like-2"></i>
-                        <span> Petugas bisa menginputkan data sepeda baru jika ada</span>
-                      </div>
-                    </button>
-                  </div>
-                  <div class="col-lg-7 col-md-6">
-                    <button type="button" class="btn-icon-clipboard" data-clipboard-text="align-center" title="Copy to clipboard">
-                      <div>
-                        <i class="ni ni-like-2"></i>
-                        <span> Petugas bisa memeriksa riwayat peminjaman yang pernah dilakukan</span>
-                      </div>
-                    </button>
-                  </div>
-                  <div class="col-lg-7 col-md-6">
-                    <button type="button" class="btn-icon-clipboard" data-clipboard-text="align-left-2" title="Copy to clipboard">
-                      <div>
-                        <i class="ni ni-like-2"></i>
-                        <span> etc...</span>
-                      </div>
-                    </button>
+                    </div>
                   </div>
                 </div>
-              </div>
-            </div>
-          </div>
-        </div>
+  </div>
+</body>
+  <!-- Argon Scripts -->
+  <!-- Core -->
+  <script src="../assets/vendor/jquery/dist/jquery.min.js"></script>
+  <script src="../assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../assets/vendor/js-cookie/js.cookie.js"></script>
+  <script src="../assets/vendor/jquery.scrollbar/jquery.scrollbar.min.js"></script>
+  <script src="../assets/vendor/jquery-scroll-lock/dist/jquery-scrollLock.min.js"></script>
+  <!-- Argon JS -->
+  <script src="../assets/js/argon.js?v=1.2.0"></script>
+</body>
+
+</html>

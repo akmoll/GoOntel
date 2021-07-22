@@ -82,7 +82,7 @@
             </li>
 
             <li class="nav-item">
-                <a class="nav-link" href="{{ route('icons') }}">
+                <a class="nav-link" href="{{ config('http://localhost')}}/listform">
                     <i class="ni ni-planet text-blue"></i> {{ __('Konfirmasi Form') }}
                 </a>
             </li>
@@ -337,7 +337,7 @@
                 <h6 class="h2 text-white d-inline-block mb-0">Tambah Sepeda</h6>
                 <nav aria-label="breadcrumb" class="d-none d-md-inline-block ml-md-4">
                   <ol class="breadcrumb breadcrumb-links breadcrumb-dark">
-                    <li class="breadcrumb-item"><a href="#"><i class="fas fa-home"></i></a></li>
+                    <li class="breadcrumb-item"><a href="{{ config('http://localhost')}}/home"><i class="fas fa-home"></i></a></li>
                     <li class="breadcrumb-item"><a href="{{ config('http://localhost')}}/sepeda">List Sepeda</a></li>
                   </ol>
                 </nav>

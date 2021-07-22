@@ -8,8 +8,7 @@
             <div class="col-lg-5 col-md-7">
                 <div class="card bg-secondary shadow border-0">
                     <div class="card-header bg-transparent pb-5">
-                        <div class="text-muted text-center mt-2 mb-1"><small>{{ __('Selamat Datang di GoOntel') }}</small></div>
-                        
+                        <div class="text-muted text-center mt-2 mb-1"><small>{{ __('Petugas Silahkan Login') }}</small></div>
                     </div>
                     <div class="card-body px-lg-5 py-lg-5">
                         <div class="text-center text-muted mb-4">

@@ -21,7 +21,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="Start your development with a Dashboard for Bootstrap 4.">
   <meta name="author" content="Creative Tim">
-  <title>Argon Dashboard - Free Dashboard for Bootstrap 4</title>
+  <title>List Sepeda</title>
   <!-- Favicon -->
   <link rel="icon" href="../assets/img/brand/favicon.png" type="image/png">
   <!-- Fonts -->
@@ -67,7 +67,7 @@
           <!-- Nav items -->
           <ul class="navbar-nav">
             <li class="nav-item">
-                <a class="nav-link" href="{{ route('home') }}">
+                <a class="nav-link" href="{{ config('http://localhost')}}/home">
                     <i class="ni ni-tv-2 text-primary"></i> {{ __('Dashboard') }}
                 </a>
             </li>
@@ -80,7 +80,7 @@
                 <div class="collapse show" id="navbar-examples">
                     <ul class="nav nav-sm flex-column">
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ route('profile.edit') }}">
+                            <a class="nav-link" href="{{ config('http://localhost')}}/sepeda">
                                 {{ __('List Sepeda') }}
                             </a>
                         </li>
@@ -94,13 +94,13 @@
             </li>
 
             <li class="nav-item">
-                <a class="nav-link" href="{{ route('icons') }}">
+                <a class="nav-link" href="{{ config('http://localhost')}}/listform">
                     <i class="ni ni-planet text-blue"></i> {{ __('Konfirmasi Peminjaman') }}
                 </a>
             </li>
 
             <li class="nav-item">
-                <a class="nav-link" href="{{ route('table') }}">
+                <a class="nav-link" href="{{ config('http://localhost')}}/panduanpetugas">
                   <i class="ni ni-bullet-list-67 text-default"></i>
                   <span class="nav-link-text">Panduan</span>
                 </a>
@@ -364,11 +364,9 @@
                             <h6 class="h2 text-white d-inline-block mb-0">Tables</h6>
                             <nav aria-label="breadcrumb" class="d-none d-md-inline-block ml-md-4">
                               <ol class="breadcrumb breadcrumb-links breadcrumb-dark">
-                                <li class="breadcrumb-item"><a href="#"><i class="fas fa-home"></i></a></li>
+                                <li class="breadcrumb-item"><a href="{{ config('http://localhost')}}/home"><i class="fas fa-home"></i></a></li>
                                 <li class="breadcrumb-item"><a href="{{ config('http://localhost')}}/sepeda">List Sepeda GO-Onthel</a></li>
                                 <li class="breadcrumb-item"><a href="{{ config('http://localhost')}}/sepeda/create">+ Tambah Sepeda</a></li>
-                                <li class="breadcrumb-item active" aria-current="page">:)</li>
-                              </ol>
                             </nav>
                           </div>
             <div class="table-responsive py-4">
